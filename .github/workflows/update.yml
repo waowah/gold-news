@@ -1,0 +1,46 @@
+name: Update Gold Dashboard
+
+on:
+  schedule:
+    # 08:15 Asia/Bangkok = 01:15 UTC (after the morning GTA announcement)
+    - cron: "15 1 * * *"
+    # 15:30 Asia/Bangkok = 08:30 UTC (afternoon refresh)
+    - cron: "30 8 * * *"
+  workflow_dispatch: {}   # allow manual "Run workflow" from the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gold-dashboard
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Refresh dashboard
+        run: python scraper.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "gold-dashboard-bot"
+          git config user.email "actions@github.com"
+          git add index.html data.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: daily gold dashboard refresh ($(TZ=Asia/Bangkok date '+%Y-%m-%d %H:%M'))"
+            git push
+          fi
