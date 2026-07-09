@@ -300,6 +300,50 @@ def render(state, tmpl):
               else f'{vol["vs_norm"]}pp ต่ำกว่าปกติ' if vol["vs_norm"] < 0
               else 'เท่ากับค่าปกติ')
 
+    # ---- analysis / narrative sections (from data.json["analysis"]) ----
+    an = state.get("analysis", {})
+    SOFT = {"green": "#dcfce7", "red": "#fee2e2", "yellow": "#fef9c3",
+            "blue": "#dbeafe", "purple": "#ede9fe", "gold": "#fef3c7"}
+    FG = {"green": "#15803d", "red": "#b91c1c", "yellow": "#a16207",
+          "blue": "#1d4ed8", "purple": "#6d28d9", "gold": "#b45309"}
+
+    highlights_html = ""
+    for h in an.get("highlights", []):
+        highlights_html += (
+            f'<div class="hl"><div class="hl-ic">{h.get("icon","•")}</div>'
+            f'<div><div class="hl-tag">{h.get("tag","")}</div>'
+            f'<div class="hl-sub">{h.get("sub","")}</div></div></div>')
+    if not highlights_html:
+        highlights_html = '<div class="hl"><div class="hl-sub">รอข้อมูลบทวิเคราะห์</div></div>'
+
+    forecasts_html = ""
+    for f in an.get("forecasts", []):
+        forecasts_html += (
+            f'<div class="fc"><div><div class="fc-house">{f.get("house","")}</div>'
+            f'<div class="fc-h">{f.get("horizon","")}</div></div>'
+            f'<div class="fc-t">{f.get("target","")}</div></div>')
+
+    catalysts_html = ""
+    for c in an.get("catalysts", []):
+        color = c.get("color", "yellow")
+        catalysts_html += (
+            f'<div class="li"><span class="li-badge" '
+            f'style="color:{FG.get(color,FG["yellow"])};background:{SOFT.get(color,SOFT["yellow"])}">'
+            f'{c.get("tag","")}</span><div class="li-txt">{c.get("text","")}</div></div>')
+
+    news_html = ""
+    for nw in an.get("news", []):
+        color = nw.get("color", "blue")
+        news_html += (
+            f'<div class="li"><span class="li-badge" '
+            f'style="color:{FG.get(color,FG["blue"])};background:{SOFT.get(color,SOFT["blue"])}">'
+            f'{nw.get("tag","")}</span><div><div class="li-txt">{nw.get("text","")}</div>'
+            f'<div class="li-date">{nw.get("date","")}</div></div></div>')
+
+    sent = an.get("sentiment", {"bull": 60, "neutral": 25, "bear": 15})
+    geo = an.get("geopolitics", {})
+    fed = an.get("fed", {})
+
     src_note = "ข้อมูลสด" if meta.get("source_thai") not in ("seed", "stale") else \
                ("ค่าล่าสุดที่บันทึกไว้ (แหล่งข้อมูลไม่ตอบสนอง)" if meta.get("source_thai") == "stale"
                 else "ค่าเริ่มต้น (seed)")
@@ -346,6 +390,19 @@ def render(state, tmpl):
         "{{SRC_NOTE}}": src_note,
         "{{SRC_SPOT}}": meta.get("source_spot", "-"),
         "{{SRC_THAI}}": meta.get("source_thai", "-"),
+        "{{ANALYSIS_ASOF}}": an.get("as_of", meta.get("updated_th", "")),
+        "{{HIGHLIGHTS}}": highlights_html,
+        "{{FORECASTS}}": forecasts_html or '<div class="fc-h">รอข้อมูลเป้าราคา</div>',
+        "{{CATALYSTS}}": catalysts_html or '<div class="li-txt">รอข้อมูลปัจจัย</div>',
+        "{{NEWS}}": news_html or '<div class="li-txt">รอข่าวล่าสุด</div>',
+        "{{SENT_BULL}}": str(sent.get("bull", 60)),
+        "{{SENT_NEU}}": str(sent.get("neutral", 25)),
+        "{{SENT_BEAR}}": str(sent.get("bear", 15)),
+        "{{CB_TEXT}}": an.get("central_banks", ""),
+        "{{GEO_TITLE}}": geo.get("title", "สถานการณ์ภูมิรัฐศาสตร์"),
+        "{{GEO_TEXT}}": geo.get("text", ""),
+        "{{FED_TITLE}}": fed.get("title", "นโยบาย Fed"),
+        "{{FED_TEXT}}": fed.get("text", ""),
     }
     html = tmpl
     for k, v in repl.items():
@@ -365,24 +422,30 @@ def main():
     today = now.date().isoformat()
 
     tg, sp = state["thai_gold"], state["spot"]
+    new_day = state["meta"].get("updated_date") != today
 
-    # --- fetch spot ---
+    # --- fetch spot / FX (only overwrite when we actually get fresh data) ---
     xau, src_spot = fetch_spot()
     thb, src_thb = fetch_usdthb()
     live_spot = xau is not None
+    live_thb = thb is not None
 
-    if xau is None:
-        xau = sp["xau_usd"]
-    if thb is None:
-        thb = sp["usd_thb"]
+    if live_spot:
+        if new_day:
+            sp["xau_usd_prev"] = sp["xau_usd"]
+        sp["xau_usd"] = xau
+    if live_thb:
+        if new_day:
+            sp["usd_thb_prev"] = sp["usd_thb"]
+        sp["usd_thb"] = thb
+    xau, thb = sp["xau_usd"], sp["usd_thb"]  # effective values for analytics
 
     # --- fetch Thai gold ---
     thai = fetch_thai_gold()
-    src_thai = "seed"
     if thai:
         src_thai = thai["source"]
-        # roll previous close once per calendar day
-        if state["meta"].get("updated_date") != today:
+        # roll previous close once per calendar day, only on fresh data
+        if new_day:
             tg["bar_sell_prev"] = tg["bar_sell"]
             tg["bar_buy_prev"] = tg["bar_buy"]
         tg["bar_sell"], tg["bar_buy"] = thai["bar_sell"], thai["bar_buy"]
@@ -393,38 +456,36 @@ def main():
         state["meta"]["gta_round"] = thai.get("round", "")
         state["meta"]["gta_time_th"] = thai.get("time_th", "") or state["meta"].get("gta_time_th", "")
     else:
-        src_thai = "stale" if state["meta"].get("source_thai") != "seed" else "seed"
+        src_thai = "stale" if state["meta"].get("source_thai") not in ("seed",) else "seed"
 
-    # --- spot prev roll (daily) ---
-    if state["meta"].get("updated_date") != today:
-        sp["xau_usd_prev"] = sp["xau_usd"]
-        sp["usd_thb_prev"] = sp["usd_thb"]
-    sp["xau_usd"], sp["usd_thb"] = xau, thb
+    got_live = live_spot or live_thb or (thai is not None)
 
-    # --- update history (one row per day) ---
+    # --- update history + monthly series only when we have fresh data ---
+    if got_live:
+        hist = state.get("spot_history", [])
+        row = {"date": today, "xau": xau, "thb": thb, "bar_sell": tg["bar_sell"]}
+        if hist and hist[-1]["date"] == today:
+            hist[-1] = row
+        else:
+            hist.append(row)
+        state["spot_history"] = hist[-40:]
+
+        months = state["monthly_bar_sell"]
+        cur_lbl = TH_MONTHS[now.month]
+        cur = next((m for m in months if m.get("current")), None)
+        if cur and cur["label"] == cur_lbl:
+            cur["price"] = tg["bar_sell"]
+        else:
+            for m in months:
+                m.pop("current", None)
+            months.append({"label": cur_lbl, "year": now.year + 543,
+                           "price": tg["bar_sell"], "current": True})
+            months[:] = months[-6:]
+
     hist = state.get("spot_history", [])
-    row = {"date": today, "xau": xau, "thb": thb, "bar_sell": tg["bar_sell"]}
-    if hist and hist[-1]["date"] == today:
-        hist[-1] = row
-    else:
-        hist.append(row)
-    hist = hist[-40:]
-    state["spot_history"] = hist
-
-    # --- update current month bar in monthly series ---
     months = state["monthly_bar_sell"]
-    cur_lbl = TH_MONTHS[now.month]
-    cur = next((m for m in months if m.get("current")), None)
-    if cur and cur["label"] == cur_lbl:
-        cur["price"] = tg["bar_sell"]
-    else:
-        for m in months:
-            m.pop("current", None)
-        months.append({"label": cur_lbl, "year": now.year + 543 - 1900 + 1900,
-                       "price": tg["bar_sell"], "current": True})
-        months[:] = months[-6:]
 
-    # --- analytics ---
+    # --- analytics (recomputed every run) ---
     state["volatility"] = stdev_ci(months)
     state["odds"] = direction_odds(hist, thb, sp.get("usd_thb_prev"),
                                    xau, sp.get("xau_usd_prev"))
@@ -433,11 +494,13 @@ def main():
     # --- meta ---
     be_year = now.year + 543
     state["meta"]["updated_iso"] = now.isoformat()
-    state["meta"]["updated_date"] = today
-    state["meta"]["updated_th"] = (f'{now.day} {TH_MONTHS[now.month]} {be_year} '
-                                   f'เวลา {now:%H:%M} น.')
-    state["meta"]["source_spot"] = src_spot or "cache"
-    state["meta"]["source_thai"] = src_thai
+    if got_live:
+        state["meta"]["updated_date"] = today
+        state["meta"]["updated_th"] = (f'{now.day} {TH_MONTHS[now.month]} {be_year} '
+                                       f'เวลา {now:%H:%M} น.')
+        state["meta"]["source_spot"] = src_spot or "cache"
+        state["meta"]["source_thai"] = src_thai
+    # when offline, preserve the existing timestamps/source flags unchanged
 
     # --- render + persist ---
     with open(os.path.join(BASE, "template.html"), encoding="utf-8") as f:

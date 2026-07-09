@@ -2,9 +2,9 @@ name: Update Gold Dashboard
 
 on:
   schedule:
-    # 08:15 Asia/Bangkok = 01:15 UTC (after the morning GTA announcement)
-    - cron: "15 1 * * *"
-    # 15:30 Asia/Bangkok = 08:30 UTC (afternoon refresh)
+    # 08:00 Asia/Bangkok = 01:00 UTC — daily morning refresh (as requested)
+    - cron: "0 1 * * *"
+    # 15:30 Asia/Bangkok = 08:30 UTC — afternoon catch of the finalised GTA price
     - cron: "30 8 * * *"
   workflow_dispatch: {}   # allow manual "Run workflow" from the Actions tab
 

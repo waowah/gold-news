@@ -12,7 +12,10 @@
     --gold:#b45309; --gold-soft:#fef3c7;
     --green:#15803d; --green-soft:#dcfce7;
     --red:#b91c1c; --red-soft:#fee2e2;
-    --blue:#1d4ed8; --gray:#94a3b8;
+    --yellow:#a16207; --yellow-soft:#fef9c3;
+    --blue:#1d4ed8; --blue-soft:#dbeafe;
+    --purple:#6d28d9; --purple-soft:#ede9fe;
+    --gray:#94a3b8;
     --r:14px; --shadow:0 1px 2px rgba(15,23,42,.04),0 1px 3px rgba(15,23,42,.06);
   }
   body{font-family:'Segoe UI','Inter','Helvetica Neue',Arial,'Noto Sans Thai',sans-serif;
@@ -36,10 +39,9 @@
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.45}}
 
   .label{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
-    color:var(--t3);margin:34px 0 14px}
-  .label b{color:var(--gold)}
+    color:var(--t3);margin:34px 0 14px;display:flex;align-items:center;gap:8px}
+  .label .ic{font-size:15px}
 
-  /* price cards */
   .grid{display:grid;gap:14px}
   .g4{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
   .card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);
@@ -58,13 +60,22 @@
   .chip.green{background:var(--green-soft)} .chip.red{background:var(--red-soft)}
   .chip.flat{background:var(--card2)}
 
-  /* two-column analytics */
+  /* highlights */
+  .hl-wrap{background:linear-gradient(135deg,#fffbeb,#fef3c7);
+    border:1px solid #fcd34d;border-radius:18px;padding:8px 10px}
+  .hl-head{font-size:14px;font-weight:800;color:var(--gold);padding:10px 12px 8px}
+  .hl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px;padding:0 4px 6px}
+  .hl{background:var(--card);border:1px solid var(--border);border-radius:12px;
+    padding:14px 16px;display:flex;gap:12px;align-items:flex-start}
+  .hl-ic{font-size:20px;line-height:1.2;flex-shrink:0}
+  .hl-tag{font-size:15px;font-weight:700;line-height:1.45}
+  .hl-sub{font-size:13px;color:var(--t2);margin-top:3px;line-height:1.5}
+
   .cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}
   @media(max-width:760px){.cols{grid-template-columns:1fr}}
   .panel-title{font-size:16px;font-weight:800;margin-bottom:2px}
   .panel-sub{font-size:13px;color:var(--t3);margin-bottom:16px}
 
-  /* volatility */
   .vol-big{font-size:32px;font-weight:800;color:var(--gold);font-variant-numeric:tabular-nums}
   .vol-meta{font-size:14px;color:var(--t2);margin-top:6px}
   .vol-meta b{color:var(--t1)}
@@ -79,7 +90,6 @@
   .tb-cur{background:var(--gold)}
   .tb-l{font-size:12px;color:var(--t2);font-weight:600;white-space:nowrap}
 
-  /* odds */
   .odds-row{display:flex;align-items:center;gap:12px;margin-bottom:12px}
   .odds-name{width:74px;font-size:14px;font-weight:700;flex-shrink:0}
   .track{flex:1;height:16px;background:var(--card2);border-radius:8px;overflow:hidden}
@@ -91,11 +101,37 @@
   .pills{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
   .pill{font-size:13px;font-weight:600;padding:5px 11px;border-radius:20px}
 
-  /* tech + fixes */
   .kv{display:flex;justify-content:space-between;align-items:center;
     padding:10px 0;border-bottom:1px solid var(--border);font-size:14px}
   .kv:last-child{border-bottom:none}
   .kv span{color:var(--t2)} .kv b{font-variant-numeric:tabular-nums;font-size:15px}
+
+  /* forecasts */
+  .fc{display:flex;justify-content:space-between;align-items:center;padding:11px 0;
+    border-bottom:1px solid var(--border)}
+  .fc:last-child{border-bottom:none}
+  .fc-house{font-size:14px;font-weight:700}
+  .fc-h{font-size:12px;color:var(--t3);margin-top:1px}
+  .fc-t{font-size:17px;font-weight:800;color:var(--gold);font-variant-numeric:tabular-nums}
+
+  /* sentiment */
+  .sent{display:flex;height:18px;border-radius:9px;overflow:hidden;margin:6px 0 8px}
+  .sent i{display:block;height:100%}
+  .sent-legend{display:flex;gap:14px;font-size:13px;color:var(--t2);flex-wrap:wrap}
+  .sent-legend b{color:var(--t1)}
+
+  /* narrative cards */
+  .narr{font-size:14px;color:var(--t2);line-height:1.7;margin-top:4px}
+  .narr b{color:var(--t1)}
+  .tagline{display:inline-block;font-size:12px;font-weight:700;padding:2px 9px;border-radius:6px;margin-bottom:8px}
+
+  /* catalysts + news lists */
+  .li{display:flex;gap:11px;padding:11px 0;border-bottom:1px solid var(--border)}
+  .li:last-child{border-bottom:none}
+  .li-badge{font-size:11px;font-weight:700;padding:3px 9px;border-radius:6px;flex-shrink:0;
+    height:fit-content;white-space:nowrap}
+  .li-txt{font-size:14px;color:var(--t1);line-height:1.55}
+  .li-date{font-size:12px;color:var(--t3);margin-top:2px}
 
   .footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--border);
     font-size:13px;color:var(--t3);line-height:1.7}
@@ -111,14 +147,21 @@
       <div class="h-icon">🪙</div>
       <div>
         <div class="h-title">ราคาทองคำวันนี้</div>
-        <div class="h-sub">สรุปตลาดทองคำ · อัปเดต {{UPDATED}}</div>
+        <div class="h-sub">สรุปตลาดทองคำและบทวิเคราะห์ · อัปเดต {{UPDATED}}</div>
       </div>
     </div>
     <div class="badge"><span class="dot"></span>อัปเดตอัตโนมัติทุกวัน</div>
   </div>
 
+  <!-- KEY HIGHLIGHTS -->
+  <div class="label"><span class="ic">⚡</span> ประเด็นสำคัญที่ต้องติดตามวันนี้</div>
+  <div class="hl-wrap">
+    <div class="hl-head">⚠️ สรุปสถานการณ์ที่นักลงทุนต้องรู้ · {{ANALYSIS_ASOF}}</div>
+    <div class="hl-grid">{{HIGHLIGHTS}}</div>
+  </div>
+
   <!-- PRICES -->
-  <div class="label"><b>■</b> ราคาทองคำในประเทศ (96.5%)</div>
+  <div class="label"><span class="ic">💰</span> ราคาปัจจุบัน (ทองไทย 96.5%)</div>
   <div class="grid g4">
     <div class="card hero">
       <div class="c-cap">ทองคำแท่ง — ขายออก</div>
@@ -150,10 +193,30 @@
     </div>
   </div>
 
-  <!-- ANALYTICS -->
-  <div class="label"><b>■</b> การวิเคราะห์</div>
+  <!-- TECHNICAL -->
+  <div class="label"><span class="ic">📊</span> วิเคราะห์เทคนิค (XAU/USD)</div>
   <div class="cols">
+    <div class="card">
+      <div class="panel-title">แนวรับ–แนวต้าน</div>
+      <div class="panel-sub">ประเมินจากกรอบราคาล่าสุด</div>
+      <div class="kv"><span>แนวต้าน 2</span><b class="red">${{R2}}</b></div>
+      <div class="kv"><span>แนวต้าน 1</span><b class="red">${{R1}}</b></div>
+      <div class="kv"><span>แนวรับ 1</span><b class="green">${{S1}}</b></div>
+      <div class="kv"><span>แนวรับ 2</span><b class="green">${{S2}}</b></div>
+    </div>
+    <div class="card">
+      <div class="panel-title">ราคาอ้างอิงตลาดต่างประเทศ</div>
+      <div class="panel-sub">Gold Spot 99.99% (USD/oz)</div>
+      <div class="kv"><span>London AM Fix</span><b>${{LDN_AM}}</b></div>
+      <div class="kv"><span>London PM Fix</span><b>${{LDN_PM}}</b></div>
+      <div class="kv"><span>New York</span><b>${{NY}}</b></div>
+      <div class="kv"><span>ประกาศ สมาคมค้าทองคำ</span><b>{{GTA_TIME}}</b></div>
+    </div>
+  </div>
 
+  <!-- THAI GOLD TRENDS -->
+  <div class="label"><span class="ic">🇹🇭</span> ความผันผวนและทิศทางทองคำไทย</div>
+  <div class="cols">
     <div class="card">
       <div class="panel-title">ความผันผวนทองไทย (SD)</div>
       <div class="panel-sub">ช่วงความเชื่อมั่น 95% · 2σ จากราคาปิด 5 เดือนล่าสุด</div>
@@ -163,7 +226,6 @@
         <b>฿{{SD_LO}} – ฿{{SD_HI}}</b></div>
       <div class="trend">{{TREND_BARS}}</div>
     </div>
-
     <div class="card">
       <div class="panel-title">แนวโน้มทองไทย 7 วันข้างหน้า</div>
       <div class="panel-sub">ประเมินจากทิศทางค่าเงินบาท และโมเมนตัมทองโลก</div>
@@ -179,31 +241,61 @@
       <div class="summary">{{ODDS_SUMMARY}}</div>
       <div class="pills">{{PILLS}}</div>
     </div>
-
-    <div class="card">
-      <div class="panel-title">แนวรับ–แนวต้าน (XAU/USD)</div>
-      <div class="panel-sub">ประเมินจากกรอบราคาล่าสุด</div>
-      <div class="kv"><span>แนวต้าน 2</span><b class="red">${{R2}}</b></div>
-      <div class="kv"><span>แนวต้าน 1</span><b class="red">${{R1}}</b></div>
-      <div class="kv"><span>แนวรับ 1</span><b class="green">${{S1}}</b></div>
-      <div class="kv"><span>แนวรับ 2</span><b class="green">${{S2}}</b></div>
-    </div>
-
-    <div class="card">
-      <div class="panel-title">ราคาอ้างอิงตลาดต่างประเทศ</div>
-      <div class="panel-sub">Gold Spot 99.99% (USD/oz)</div>
-      <div class="kv"><span>London AM Fix</span><b>${{LDN_AM}}</b></div>
-      <div class="kv"><span>London PM Fix</span><b>${{LDN_PM}}</b></div>
-      <div class="kv"><span>New York</span><b>${{NY}}</b></div>
-      <div class="kv"><span>ประกาศ สมาคมค้าทองคำ</span><b>{{GTA_TIME}}</b></div>
-    </div>
-
   </div>
+
+  <!-- INSTITUTIONAL VIEW -->
+  <div class="label"><span class="ic">🏛️</span> มุมมองสถาบัน</div>
+  <div class="cols">
+    <div class="card">
+      <div class="panel-title">เป้าราคาทองจากสถาบันการเงิน</div>
+      <div class="panel-sub">เป้าหมายสิ้นปี 2026 (USD/oz)</div>
+      {{FORECASTS}}
+    </div>
+    <div class="card">
+      <div class="panel-title">Sentiment ตลาด & ธนาคารกลาง</div>
+      <div class="panel-sub">มุมมองนักลงทุนและแรงซื้อทางการ</div>
+      <div class="sent">
+        <i style="width:{{SENT_BULL}}%;background:var(--green)"></i>
+        <i style="width:{{SENT_NEU}}%;background:var(--gray)"></i>
+        <i style="width:{{SENT_BEAR}}%;background:var(--red)"></i>
+      </div>
+      <div class="sent-legend">
+        <div>🟢 Bullish <b>{{SENT_BULL}}%</b></div>
+        <div>⚪ Neutral <b>{{SENT_NEU}}%</b></div>
+        <div>🔴 Bearish <b>{{SENT_BEAR}}%</b></div>
+      </div>
+      <div class="narr" style="margin-top:14px">{{CB_TEXT}}</div>
+    </div>
+  </div>
+
+  <!-- RISK FACTORS -->
+  <div class="label"><span class="ic">⚠️</span> ปัจจัยความเสี่ยงและตัวขับเคลื่อน</div>
+  <div class="cols">
+    <div class="card">
+      <span class="tagline" style="color:var(--purple);background:var(--purple-soft)">ภูมิรัฐศาสตร์</span>
+      <div class="panel-title">{{GEO_TITLE}}</div>
+      <div class="narr">{{GEO_TEXT}}</div>
+    </div>
+    <div class="card">
+      <span class="tagline" style="color:var(--blue);background:var(--blue-soft)">นโยบายการเงิน</span>
+      <div class="panel-title">{{FED_TITLE}}</div>
+      <div class="narr">{{FED_TEXT}}</div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:14px">
+    <div class="panel-title">ปัจจัยที่ต้องจับตาใน 7 วันนี้</div>
+    <div class="panel-sub">เหตุการณ์/ข้อมูลเศรษฐกิจที่อาจขับเคลื่อนราคา</div>
+    {{CATALYSTS}}
+  </div>
+
+  <!-- LATEST NEWS -->
+  <div class="label"><span class="ic">📰</span> ข่าวล่าสุด</div>
+  <div class="card">{{NEWS}}</div>
 
   <div class="footer">
     <b>อัปเดตล่าสุด:</b> {{UPDATED}} · สถานะข้อมูลทองไทย: {{SRC_NOTE}}<br>
-    แหล่งข้อมูล: ทองไทย — สมาคมค้าทองคำ (goldtraders.or.th) · ทองโลก — gold-api.com · อัตราแลกเปลี่ยน — er-api.com<br>
-    หน้านี้อัปเดตอัตโนมัติทุกวันผ่าน GitHub Actions · <span style="color:var(--gray)">ข้อมูลเพื่อการติดตามเท่านั้น ไม่ใช่คำแนะนำการลงทุน</span>
+    แหล่งข้อมูล: ทองไทย — สมาคมค้าทองคำ (goldtraders.or.th) · ทองโลก — gold-api.com · อัตราแลกเปลี่ยน — er-api.com · บทวิเคราะห์ — Reuters/WGC/สำนักวิเคราะห์<br>
+    ราคาอัปเดตอัตโนมัติทุกวันผ่าน GitHub Actions · บทวิเคราะห์รีเฟรชโดยงานตั้งเวลา 08:00 น. · <span style="color:var(--gray)">ข้อมูลเพื่อการติดตามเท่านั้น ไม่ใช่คำแนะนำการลงทุน</span>
   </div>
 
 </div>
