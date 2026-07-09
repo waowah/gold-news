@@ -1,30 +1,30 @@
 {
   "meta": {
-    "updated_iso": "2026-07-09T11:26:18.410641+07:00",
-    "updated_date": "2026-07-08",
-    "updated_th": "8 ก.ค. 2569 เวลา 15:04 น.",
-    "gta_round": "11",
-    "gta_time_th": "08/07/2569 เวลา 15:04 น.",
-    "source_thai": "seed",
-    "source_spot": "seed",
-    "notes": "Seed = latest confirmed GTA close (8 Jul). GitHub Actions refreshes daily from live sources."
+    "updated_iso": "2026-07-09T15:59:00+07:00",
+    "updated_date": "2026-07-09",
+    "updated_th": "9 ก.ค. 2569 เวลา 15:59 น.",
+    "gta_round": "21",
+    "gta_time_th": "09/07/2569 เวลา 15:42 น.",
+    "source_thai": "goldtraders-classic",
+    "source_spot": "gold-api.com",
+    "notes": "Live GTA round 21 (9 Jul). Auto-refreshes daily."
   },
   "thai_gold": {
-    "bar_sell": 65100,
-    "bar_buy": 64900,
-    "jewelry_sell": 65900,
-    "jewelry_buy": 63596,
-    "bar_sell_prev": 65250,
-    "bar_buy_prev": 65050
+    "bar_sell": 65050,
+    "bar_buy": 64850,
+    "jewelry_sell": 65850,
+    "jewelry_buy": 63551,
+    "bar_sell_prev": 65100,
+    "bar_buy_prev": 64900
   },
   "spot": {
-    "xau_usd": 4127.4,
-    "xau_usd_prev": 4142.0,
-    "usd_thb": 33.31,
-    "usd_thb_prev": 33.22,
-    "london_am": 4124.15,
-    "london_pm": 4155.8,
-    "newyork": 4157.6
+    "xau_usd": 4090.1,
+    "xau_usd_prev": 4127.4,
+    "usd_thb": 33.4676,
+    "usd_thb_prev": 33.31,
+    "london_am": 4055.4,
+    "london_pm": 4066.2,
+    "newyork": 4060.68
   },
   "monthly_bar_sell": [
     {
@@ -55,7 +55,7 @@
     {
       "label": "ก.ค.",
       "year": 2569,
-      "price": 65100,
+      "price": 65050,
       "current": true
     }
   ],
@@ -89,6 +89,12 @@
       "xau": 4127.4,
       "thb": 33.31,
       "bar_sell": 65100
+    },
+    {
+      "date": "2026-07-09",
+      "xau": 4090.1,
+      "thb": 33.4676,
+      "bar_sell": 65050
     }
   ],
   "analysis": {
@@ -127,8 +133,8 @@
       {
         "icon": "🇹🇭",
         "color": "green",
-        "tag": "ทองไทยแท่ง 96.5% ขายออก ฿65,100",
-        "sub": "ปรับลง 150 บาทจากวานนี้ · ค่าเงินบาท 33.31 บาท/ดอลลาร์ · XAU/USD ~$4,127"
+        "tag": "ทองไทยแท่ง 96.5% ขายออก ฿65,050",
+        "sub": "ปรับลง 50 บาทจากวานนี้ · บาท 33.47 บาท/ดอลลาร์ · XAU/USD ~$4,090 (ทองโลกร่วง 3 วันติด)"
       }
     ],
     "geopolitics": {
@@ -197,6 +203,12 @@
     "news": [
       {
         "date": "9 ก.ค. 2569",
+        "color": "red",
+        "tag": "ทองโลก",
+        "text": "ราคาทองโลกร่วงต่อเนื่อง 3 วัน หลุด $4,100 จากดอลลาร์แข็งค่าและแรงกดดันดอกเบี้ย Fed"
+      },
+      {
+        "date": "9 ก.ค. 2569",
         "color": "blue",
         "tag": "Fed",
         "text": "ตลาดลดโอกาสขึ้นดอกเบี้ย ก.ย. เหลือ ~50% หลังการจ้างงานสหรัฐอ่อนกว่าคาด"
@@ -224,12 +236,6 @@
         "color": "green",
         "tag": "อุปสงค์",
         "text": "ธนาคารกลางทั่วโลกซื้อทองสุทธิ 244 ตัน สูงกว่าค่าเฉลี่ย 5 ปี"
-      },
-      {
-        "date": "2569",
-        "color": "purple",
-        "tag": "แนวโน้ม",
-        "text": "WGC คาดปี 2026 ธนาคารกลางซื้อทองรวมราว 850 ตัน"
       }
     ]
   },
@@ -249,10 +255,10 @@
     ]
   },
   "odds": {
-    "up": 40,
+    "up": 33,
     "side": 22,
-    "down": 38,
-    "summary": "สัญญาณ 7 วันเอียงขึ้น — ปัจจัยหลักคือทิศทางค่าเงินบาทและโมเมนตัมทองโลก",
+    "down": 45,
+    "summary": "สัญญาณ 7 วันเอียงลง — แรงกดดันจากค่าเงินบาท/ทองโลกอ่อนตัว",
     "signals": [
       [
         "บาทอ่อนค่า หนุนทองบาท",
@@ -267,16 +273,16 @@
         "red"
       ],
       [
-        "โมเมนตัมรายสัปดาห์บวก",
-        "green"
+        "โมเมนตัมรายสัปดาห์ลบ",
+        "red"
       ]
     ]
   },
   "tech": {
     "r2": 4200,
-    "r1": 4150,
-    "s1": 4100,
-    "s2": 4075,
+    "r1": 4125,
+    "s1": 4075,
+    "s2": 4050,
     "range_lo": 4090,
     "range_hi": 4148
   }
