@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gold Dashboard — ราคาทองคำวันนี้</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#f7f8fa; --card:#ffffff; --card2:#f3f4f6; --border:#e2e8f0;
+    --t1:#0f172a; --t2:#475569; --t3:#64748b;
+    --gold:#b45309; --gold-soft:#fef3c7;
+    --green:#15803d; --green-soft:#dcfce7;
+    --red:#b91c1c; --red-soft:#fee2e2;
+    --blue:#1d4ed8; --gray:#94a3b8;
+    --r:14px; --shadow:0 1px 2px rgba(15,23,42,.04),0 1px 3px rgba(15,23,42,.06);
+  }
+  body{font-family:'Segoe UI','Inter','Helvetica Neue',Arial,'Noto Sans Thai',sans-serif;
+    background:var(--bg);color:var(--t1);line-height:1.55;-webkit-font-smoothing:antialiased}
+  .page{max-width:1080px;margin:0 auto;padding:0 20px 56px}
+
+  /* header */
+  .header{display:flex;align-items:center;justify-content:space-between;
+    gap:14px;flex-wrap:wrap;padding:26px 0 20px;border-bottom:1px solid var(--border)}
+  .h-left{display:flex;align-items:center;gap:14px}
+  .h-icon{width:46px;height:46px;border-radius:12px;flex-shrink:0;
+    background:linear-gradient(135deg,#f59e0b,#b45309);
+    display:flex;align-items:center;justify-content:center;font-size:24px}
+  .h-title{font-size:26px;font-weight:800;letter-spacing:-.01em}
+  .h-sub{font-size:15px;color:var(--t2);margin-top:3px}
+  .badge{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:600;
+    color:var(--green);background:var(--green-soft);border:1px solid #bbf7d0;
+    padding:6px 13px;border-radius:20px}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--green);
+    animation:pulse 1.7s ease-in-out infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.45}}
+
+  .label{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--t3);margin:34px 0 14px}
+  .label b{color:var(--gold)}
+
+  /* price cards */
+  .grid{display:grid;gap:14px}
+  .g4{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);
+    padding:18px 20px;box-shadow:var(--shadow)}
+  .card.hero{border-top:3px solid var(--gold)}
+  .c-cap{font-size:13px;color:var(--t2);font-weight:600}
+  .c-big{font-size:34px;font-weight:800;letter-spacing:-.02em;margin:6px 0 2px;
+    font-variant-numeric:tabular-nums}
+  .c-unit{font-size:15px;color:var(--t3);font-weight:600}
+  .c-row{display:flex;gap:16px;margin-top:10px;flex-wrap:wrap}
+  .c-row div{font-size:14px;color:var(--t2)}
+  .c-row b{color:var(--t1);font-weight:700}
+  .chip{display:inline-block;font-size:14px;font-weight:700;padding:3px 10px;
+    border-radius:8px;margin-top:8px;font-variant-numeric:tabular-nums}
+  .green{color:var(--green)} .red{color:var(--red)} .flat{color:var(--t3)}
+  .chip.green{background:var(--green-soft)} .chip.red{background:var(--red-soft)}
+  .chip.flat{background:var(--card2)}
+
+  /* two-column analytics */
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:760px){.cols{grid-template-columns:1fr}}
+  .panel-title{font-size:16px;font-weight:800;margin-bottom:2px}
+  .panel-sub{font-size:13px;color:var(--t3);margin-bottom:16px}
+
+  /* volatility */
+  .vol-big{font-size:32px;font-weight:800;color:var(--gold);font-variant-numeric:tabular-nums}
+  .vol-meta{font-size:14px;color:var(--t2);margin-top:6px}
+  .vol-meta b{color:var(--t1)}
+  .ci{margin-top:12px;padding:12px 14px;background:var(--card2);border-radius:10px;
+    font-size:14px;color:var(--t2)}
+  .ci b{color:var(--t1);font-variant-numeric:tabular-nums}
+  .trend{display:flex;align-items:flex-end;justify-content:space-between;gap:8px;
+    height:120px;margin-top:18px;padding-top:6px}
+  .tb{display:flex;flex-direction:column;align-items:center;gap:6px;flex:1}
+  .tb-v{font-size:11px;color:var(--t3);font-variant-numeric:tabular-nums}
+  .tb-bar{width:70%;max-width:34px;background:#d6b78a;border-radius:5px 5px 0 0}
+  .tb-cur{background:var(--gold)}
+  .tb-l{font-size:12px;color:var(--t2);font-weight:600;white-space:nowrap}
+
+  /* odds */
+  .odds-row{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+  .odds-name{width:74px;font-size:14px;font-weight:700;flex-shrink:0}
+  .track{flex:1;height:16px;background:var(--card2);border-radius:8px;overflow:hidden}
+  .fill{height:100%;border-radius:8px}
+  .odds-pct{width:44px;text-align:right;font-size:15px;font-weight:800;
+    font-variant-numeric:tabular-nums}
+  .summary{margin-top:14px;font-size:14px;color:var(--t1);background:var(--gold-soft);
+    border-radius:10px;padding:12px 14px;line-height:1.6}
+  .pills{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+  .pill{font-size:13px;font-weight:600;padding:5px 11px;border-radius:20px}
+
+  /* tech + fixes */
+  .kv{display:flex;justify-content:space-between;align-items:center;
+    padding:10px 0;border-bottom:1px solid var(--border);font-size:14px}
+  .kv:last-child{border-bottom:none}
+  .kv span{color:var(--t2)} .kv b{font-variant-numeric:tabular-nums;font-size:15px}
+
+  .footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--border);
+    font-size:13px;color:var(--t3);line-height:1.7}
+  .footer b{color:var(--t2)}
+  a{color:var(--blue);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div class="h-left">
+      <div class="h-icon">🪙</div>
+      <div>
+        <div class="h-title">ราคาทองคำวันนี้</div>
+        <div class="h-sub">สรุปตลาดทองคำ · อัปเดต {{UPDATED}}</div>
+      </div>
+    </div>
+    <div class="badge"><span class="dot"></span>อัปเดตอัตโนมัติทุกวัน</div>
+  </div>
+
+  <!-- PRICES -->
+  <div class="label"><b>■</b> ราคาทองคำในประเทศ (96.5%)</div>
+  <div class="grid g4">
+    <div class="card hero">
+      <div class="c-cap">ทองคำแท่ง — ขายออก</div>
+      <div class="c-big">฿{{BAR_SELL}}</div>
+      <div class="c-unit">บาทละ</div>
+      <span class="chip {{BAR_DELTA_CLS}}">{{BAR_DELTA}} จากวานนี้</span>
+      <div class="c-row">
+        <div>รับซื้อ <b>฿{{BAR_BUY}}</b></div>
+        <div>สเปรด <b>฿{{SPREAD}}</b></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="c-cap">ทองรูปพรรณ — ขายออก</div>
+      <div class="c-big">฿{{JEW_SELL}}</div>
+      <div class="c-unit">บาทละ</div>
+      <div class="c-row"><div>รับซื้อ / ฐานภาษี <b>฿{{JEW_BUY}}</b></div></div>
+    </div>
+    <div class="card">
+      <div class="c-cap">ทองคำโลก (XAU/USD)</div>
+      <div class="c-big">${{XAU}}</div>
+      <div class="c-unit">ต่อออนซ์</div>
+      <span class="chip {{XAU_CLS}}">{{XAU_DELTA}}</span>
+    </div>
+    <div class="card">
+      <div class="c-cap">อัตราแลกเปลี่ยน USD/THB</div>
+      <div class="c-big">{{THB}}</div>
+      <div class="c-unit">บาท ต่อ ดอลลาร์</div>
+      <span class="chip {{THB_CLS}}">{{THB_SUB}}</span>
+    </div>
+  </div>
+
+  <!-- ANALYTICS -->
+  <div class="label"><b>■</b> การวิเคราะห์</div>
+  <div class="cols">
+
+    <div class="card">
+      <div class="panel-title">ความผันผวนทองไทย (SD)</div>
+      <div class="panel-sub">ช่วงความเชื่อมั่น 95% · 2σ จากราคาปิด 5 เดือนล่าสุด</div>
+      <div class="vol-big">{{SD_PCT}}</div>
+      <div class="vol-meta">ระดับความผันผวน: <b>{{SD_LEVEL}}</b> · {{SD_VS}}</div>
+      <div class="ci">ค่าเฉลี่ย <b>฿{{SD_MEAN}}</b> · ช่วง 95%:
+        <b>฿{{SD_LO}} – ฿{{SD_HI}}</b></div>
+      <div class="trend">{{TREND_BARS}}</div>
+    </div>
+
+    <div class="card">
+      <div class="panel-title">แนวโน้มทองไทย 7 วันข้างหน้า</div>
+      <div class="panel-sub">ประเมินจากทิศทางค่าเงินบาท และโมเมนตัมทองโลก</div>
+      <div class="odds-row"><div class="odds-name" style="color:var(--green)">ขึ้น</div>
+        <div class="track"><div class="fill" style="{{ODDS_UP_BAR}}"></div></div>
+        <div class="odds-pct">{{ODDS_UP}}%</div></div>
+      <div class="odds-row"><div class="odds-name" style="color:var(--t3)">ทรงตัว</div>
+        <div class="track"><div class="fill" style="{{ODDS_SIDE_BAR}}"></div></div>
+        <div class="odds-pct">{{ODDS_SIDE}}%</div></div>
+      <div class="odds-row"><div class="odds-name" style="color:var(--red)">ลง</div>
+        <div class="track"><div class="fill" style="{{ODDS_DOWN_BAR}}"></div></div>
+        <div class="odds-pct">{{ODDS_DOWN}}%</div></div>
+      <div class="summary">{{ODDS_SUMMARY}}</div>
+      <div class="pills">{{PILLS}}</div>
+    </div>
+
+    <div class="card">
+      <div class="panel-title">แนวรับ–แนวต้าน (XAU/USD)</div>
+      <div class="panel-sub">ประเมินจากกรอบราคาล่าสุด</div>
+      <div class="kv"><span>แนวต้าน 2</span><b class="red">${{R2}}</b></div>
+      <div class="kv"><span>แนวต้าน 1</span><b class="red">${{R1}}</b></div>
+      <div class="kv"><span>แนวรับ 1</span><b class="green">${{S1}}</b></div>
+      <div class="kv"><span>แนวรับ 2</span><b class="green">${{S2}}</b></div>
+    </div>
+
+    <div class="card">
+      <div class="panel-title">ราคาอ้างอิงตลาดต่างประเทศ</div>
+      <div class="panel-sub">Gold Spot 99.99% (USD/oz)</div>
+      <div class="kv"><span>London AM Fix</span><b>${{LDN_AM}}</b></div>
+      <div class="kv"><span>London PM Fix</span><b>${{LDN_PM}}</b></div>
+      <div class="kv"><span>New York</span><b>${{NY}}</b></div>
+      <div class="kv"><span>ประกาศ สมาคมค้าทองคำ</span><b>{{GTA_TIME}}</b></div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <b>อัปเดตล่าสุด:</b> {{UPDATED}} · สถานะข้อมูลทองไทย: {{SRC_NOTE}}<br>
+    แหล่งข้อมูล: ทองไทย — สมาคมค้าทองคำ (goldtraders.or.th) · ทองโลก — gold-api.com · อัตราแลกเปลี่ยน — er-api.com<br>
+    หน้านี้อัปเดตอัตโนมัติทุกวันผ่าน GitHub Actions · <span style="color:var(--gray)">ข้อมูลเพื่อการติดตามเท่านั้น ไม่ใช่คำแนะนำการลงทุน</span>
+  </div>
+
+</div>
+</body>
+</html>

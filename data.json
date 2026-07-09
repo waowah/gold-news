@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "updated_iso": "2026-07-08T22:30:21.738615+07:00",
+    "updated_date": "2026-07-08",
+    "updated_th": "8 ก.ค. 2569 เวลา 22:30 น.",
+    "gta_round": "11",
+    "gta_time_th": "08/07/2569 เวลา 15:04 น.",
+    "source_thai": "seed",
+    "source_spot": "cache",
+    "notes": "Seed snapshot. GitHub Actions refreshes this file daily from live sources."
+  },
+  "thai_gold": {
+    "bar_sell": 65100,
+    "bar_buy": 64900,
+    "jewelry_sell": 65900,
+    "jewelry_buy": 63596,
+    "bar_sell_prev": 65250,
+    "bar_buy_prev": 65050
+  },
+  "spot": {
+    "xau_usd": 4127.4,
+    "xau_usd_prev": 4142.0,
+    "usd_thb": 33.31,
+    "usd_thb_prev": 33.22,
+    "london_am": 4124.15,
+    "london_pm": 4155.8,
+    "newyork": 4157.6
+  },
+  "monthly_bar_sell": [
+    {
+      "label": "ก.พ.",
+      "year": 2569,
+      "price": 70500
+    },
+    {
+      "label": "มี.ค.",
+      "year": 2569,
+      "price": 67800
+    },
+    {
+      "label": "เม.ย.",
+      "year": 2569,
+      "price": 68050
+    },
+    {
+      "label": "พ.ค.",
+      "year": 2569,
+      "price": 66050
+    },
+    {
+      "label": "มิ.ย.",
+      "year": 2569,
+      "price": 65600
+    },
+    {
+      "label": "ก.ค.",
+      "year": 2569,
+      "price": 65100,
+      "current": true
+    }
+  ],
+  "spot_history": [
+    {
+      "date": "2026-07-02",
+      "xau": 4090.0,
+      "thb": 33.05,
+      "bar_sell": 64650
+    },
+    {
+      "date": "2026-07-03",
+      "xau": 4148.0,
+      "thb": 33.1,
+      "bar_sell": 66050
+    },
+    {
+      "date": "2026-07-06",
+      "xau": 4139.0,
+      "thb": 33.18,
+      "bar_sell": 65750
+    },
+    {
+      "date": "2026-07-07",
+      "xau": 4142.0,
+      "thb": 33.22,
+      "bar_sell": 65250
+    },
+    {
+      "date": "2026-07-08",
+      "xau": 4127.4,
+      "thb": 33.31,
+      "bar_sell": 65100
+    }
+  ],
+  "volatility": {
+    "sd_pct": 2.7,
+    "mean": 67600,
+    "lo": 64130,
+    "hi": 71070,
+    "level": "ต่ำ (Low)",
+    "vs_norm": -0.3,
+    "closed": [
+      70500,
+      67800,
+      68050,
+      66050,
+      65600
+    ]
+  },
+  "odds": {
+    "up": 40,
+    "side": 22,
+    "down": 38,
+    "summary": "สัญญาณ 7 วันเอียงขึ้น — ปัจจัยหลักคือทิศทางค่าเงินบาทและโมเมนตัมทองโลก",
+    "signals": [
+      [
+        "บาทอ่อนค่า หนุนทองบาท",
+        "green"
+      ],
+      [
+        "ทองโลกลงรายวัน",
+        "red"
+      ],
+      [
+        "หลุดค่าเฉลี่ย 5 วัน",
+        "red"
+      ],
+      [
+        "โมเมนตัมรายสัปดาห์บวก",
+        "green"
+      ]
+    ]
+  },
+  "tech": {
+    "r2": 4200,
+    "r1": 4150,
+    "s1": 4100,
+    "s2": 4075,
+    "range_lo": 4090,
+    "range_hi": 4148
+  }
+}
