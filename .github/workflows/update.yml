@@ -2,8 +2,12 @@ name: Update Gold Dashboard
 
 on:
   schedule:
-    # 08:00 Asia/Bangkok = 01:00 UTC — morning refresh
-    - cron: "0 1 * * *"
+    # NOTE: GitHub cron is UTC and tends to DROP on-the-hour schedules under load,
+    # so these are deliberately a few minutes past the hour.
+    # 08:07 Asia/Bangkok = 01:07 UTC — early spot/FX refresh
+    - cron: "7 1 * * *"
+    # 09:20 Asia/Bangkok = 02:20 UTC — catches the GTA morning price (round 1 ~09:03)
+    - cron: "20 2 * * *"
     # 15:30 Asia/Bangkok = 08:30 UTC — afternoon catch of the finalised GTA price
     - cron: "30 8 * * *"
   workflow_dispatch: {}   # allow manual "Run workflow" from the Actions tab

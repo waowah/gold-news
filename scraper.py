@@ -65,10 +65,34 @@ def get_text(url, timeout=25):
 
 
 def fetch_spot():
-    """XAU/USD spot price in USD/oz."""
+    """XAU/USD spot price in USD/oz, with a staleness guard + fallback source.
+
+    gold-api.com occasionally serves a cached price whose `updatedAt` is a day or
+    more old — that would silently freeze the dashboard. So we only trust it when
+    its timestamp is within ~30h of now; otherwise we fall back to goldprice.org."""
     d = get_json("https://api.gold-api.com/price/XAU")
     if d and d.get("price"):
-        return round(float(d["price"]), 2), "gold-api.com"
+        fresh = True
+        ts = d.get("updatedAt")
+        if ts:
+            try:
+                upd = dt.datetime.fromisoformat(ts.replace("Z", "+00:00"))
+                age_h = (dt.datetime.now(dt.timezone.utc) - upd).total_seconds() / 3600
+                fresh = age_h <= 30
+            except Exception:
+                fresh = True
+        if fresh:
+            return round(float(d["price"]), 2), "gold-api.com"
+        print("[warn] gold-api price is stale; trying fallback", file=sys.stderr)
+
+    # fallback: goldprice.org live rates
+    g = get_json("https://data-asg.goldprice.org/dbXRates/USD")
+    try:
+        px = float(g["items"][0]["xauPrice"])
+        if px > 0:
+            return round(px, 2), "goldprice.org"
+    except Exception:
+        pass
     return None, None
 
 
