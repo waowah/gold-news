@@ -391,6 +391,8 @@ def render(state, tmpl):
         "{{SRC_SPOT}}": meta.get("source_spot", "-"),
         "{{SRC_THAI}}": meta.get("source_thai", "-"),
         "{{ANALYSIS_ASOF}}": an.get("as_of", meta.get("updated_th", "")),
+        "{{ANALYSIS_UPDATED}}": (meta.get("analysis_updated_th")
+                                 or an.get("as_of") or "ยังไม่ได้รีเฟรช"),
         "{{HIGHLIGHTS}}": highlights_html,
         "{{FORECASTS}}": forecasts_html or '<div class="fc-h">รอข้อมูลเป้าราคา</div>',
         "{{CATALYSTS}}": catalysts_html or '<div class="li-txt">รอข้อมูลปัจจัย</div>',
