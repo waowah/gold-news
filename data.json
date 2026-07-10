@@ -1,12 +1,12 @@
 {
   "meta": {
-    "updated_iso": "2026-07-09T15:59:00+07:00",
+    "updated_iso": "2026-07-10T18:26:40.040508+07:00",
     "updated_date": "2026-07-10",
-    "updated_th": "10 ก.ค. 2569 เวลา 11:20 น.",
+    "updated_th": "10 ก.ค. 2569 เวลา 18:26 น.",
     "gta_round": "1",
     "gta_time_th": "10/07/2569 เวลา 09:03 น.",
-    "source_thai": "goldtraders (10 ก.ค. รอบ 1)",
-    "source_spot": "investing.com (gold-api หยุดอัปเดต)",
+    "source_thai": "stale",
+    "source_spot": "gold-api.com",
     "notes": "10 Jul: GTA round 1 09:03; gold-api was serving stale 9 Jul price so spot taken from market data.",
     "analysis_updated_th": "10 ก.ค. 2569 เวลา 09:20 น."
   },
@@ -19,9 +19,9 @@
     "bar_buy_prev": 64850
   },
   "spot": {
-    "xau_usd": 4124.0,
+    "xau_usd": 4106.8,
     "xau_usd_prev": 4090.1,
-    "usd_thb": 33.47,
+    "usd_thb": 33.414,
     "usd_thb_prev": 33.4676,
     "london_am": 4055.4,
     "london_pm": 4066.2,
@@ -99,8 +99,8 @@
     },
     {
       "date": "2026-07-10",
-      "xau": 4124.0,
-      "thb": 33.47,
+      "xau": 4106.8,
+      "thb": 33.414,
       "bar_sell": 65000
     }
   ],
@@ -267,11 +267,15 @@
     ]
   },
   "odds": {
-    "up": 37,
-    "side": 28,
-    "down": 35,
-    "summary": "สัญญาณ 7 วันเอียงขึ้น — ปัจจัยหลักคือทิศทางค่าเงินบาทและโมเมนตัมทองโลก",
+    "up": 30,
+    "side": 22,
+    "down": 48,
+    "summary": "สัญญาณ 7 วันเอียงลง — แรงกดดันจากค่าเงินบาท/ทองโลกอ่อนตัว",
     "signals": [
+      [
+        "บาทแข็งค่า กดทองบาท",
+        "red"
+      ],
       [
         "ทองโลกขึ้นรายวัน",
         "green"
@@ -279,14 +283,18 @@
       [
         "หลุดค่าเฉลี่ย 5 วัน",
         "red"
+      ],
+      [
+        "โมเมนตัมรายสัปดาห์ลบ",
+        "red"
       ]
     ]
   },
   "tech": {
     "r2": 4200,
-    "r1": 4150,
-    "s1": 4100,
-    "s2": 4075,
+    "r1": 4125,
+    "s1": 4075,
+    "s2": 4050,
     "range_lo": 4090,
     "range_hi": 4148
   }
