@@ -1,11 +1,11 @@
 {
   "meta": {
-    "updated_iso": "2026-07-11T20:18:44.186142+07:00",
-    "updated_date": "2026-07-11",
-    "updated_th": "11 ก.ค. 2569 เวลา 17:01 น.",
+    "updated_iso": "2026-07-12T11:32:24.154904+07:00",
+    "updated_date": "2026-07-12",
+    "updated_th": "12 ก.ค. 2569 เวลา 11:32 น.",
     "gta_round": "9",
     "gta_time_th": "10/07/2569 เวลา 17:04 น.",
-    "source_thai": "goldtraders-classic",
+    "source_thai": "stale",
     "source_spot": "gold-api.com",
     "notes": "11 Jul (Sat): GTA does not announce on weekends - Thai price is Friday final round 9 (17:04). Spot/FX are Friday close values.",
     "analysis_updated_th": "11 ก.ค. 2569 เวลา 20:17 น."
@@ -20,9 +20,9 @@
   },
   "spot": {
     "xau_usd": 4121.4,
-    "xau_usd_prev": 4106.8,
-    "usd_thb": 33.3051,
-    "usd_thb_prev": 33.414,
+    "xau_usd_prev": 4121.4,
+    "usd_thb": 33.309,
+    "usd_thb_prev": 33.3051,
     "london_am": 4107.05,
     "london_pm": 4130.15,
     "newyork": 4124.66
@@ -107,6 +107,12 @@
       "date": "2026-07-11",
       "xau": 4121.4,
       "thb": 33.3051,
+      "bar_sell": 64800
+    },
+    {
+      "date": "2026-07-12",
+      "xau": 4121.4,
+      "thb": 33.309,
       "bar_sell": 64800
     }
   ],
@@ -273,19 +279,11 @@
     ]
   },
   "odds": {
-    "up": 40,
-    "side": 24,
-    "down": 36,
+    "up": 38,
+    "side": 32,
+    "down": 30,
     "summary": "สัญญาณ 7 วันเอียงขึ้น — ปัจจัยหลักคือทิศทางค่าเงินบาทและโมเมนตัมทองโลก",
     "signals": [
-      [
-        "บาทแข็งค่า กดทองบาท",
-        "red"
-      ],
-      [
-        "ทองโลกขึ้นรายวัน",
-        "green"
-      ],
       [
         "ยืนเหนือค่าเฉลี่ย 5 วัน",
         "green"
