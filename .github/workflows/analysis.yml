@@ -1,0 +1,49 @@
+name: Refresh Gold Dashboard Analysis
+
+on:
+  schedule:
+    # 09:35 Asia/Bangkok = 02:35 UTC — runs after the 09:20 BKK numbers refresh
+    # (round-1 GTA price) so the analysis step has the freshest same-day numbers
+    # for context. Shares the "gold-dashboard" concurrency group with
+    # update.yml so the two workflows never write data.json at the same time.
+    - cron: "35 2 * * *"
+  workflow_dispatch: {}   # allow manual "Run workflow" from the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gold-dashboard
+  cancel-in-progress: false
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate analysis + re-render
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/generate_analysis.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "gold-dashboard-bot"
+          git config user.email "actions@github.com"
+          git add index.html data.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: daily gold analysis refresh ($(TZ=Asia/Bangkok date '+%Y-%m-%d %H:%M'))"
+            git push
+          fi
