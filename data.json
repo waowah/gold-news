@@ -1,12 +1,12 @@
 {
   "meta": {
-    "updated_iso": "2026-07-21T17:39:16.560235+07:00",
-    "updated_date": "2026-07-21",
-    "updated_th": "21 ก.ค. 2569 เวลา 17:39 น.",
+    "updated_iso": "2026-07-22T11:27:24.514445+07:00",
+    "updated_date": "2026-07-22",
+    "updated_th": "22 ก.ค. 2569 เวลา 11:27 น.",
     "gta_round": "4",
     "gta_time_th": "14/07/2569 เวลา 09:59 น.",
     "source_thai": "stale",
-    "source_spot": "cache",
+    "source_spot": "gold-api.com",
     "notes": "14 Jul (Tue): GTA classic posted fresh round-4 price at 09:59 Bangkok (63,700/63,500), first live update since Saturday 11/07 -- ends the multi-day stale streak. Bar sell down THB1,300 (-2.0%) vs the carried-over Saturday price. Spot XAU/USD (gold-api.com) at $4,059.90 (-1.3% vs prior read) and USD/THB (er-api.com) roughly flat at 33.34.",
     "analysis_updated_th": "17 ก.ค. 2569 เวลา 11:53 น."
   },
@@ -19,10 +19,10 @@
     "bar_buy_prev": 64800
   },
   "spot": {
-    "xau_usd": 4056.0,
-    "xau_usd_prev": 4022.6,
-    "usd_thb": 33.6459,
-    "usd_thb_prev": 33.6469,
+    "xau_usd": 4129.1,
+    "xau_usd_prev": 4056.0,
+    "usd_thb": 33.6978,
+    "usd_thb_prev": 33.6459,
     "london_am": 4070.95,
     "london_pm": 4039.75,
     "newyork": 4016.44
@@ -167,6 +167,12 @@
       "date": "2026-07-21",
       "xau": 4056.0,
       "thb": 33.6459,
+      "bar_sell": 63700
+    },
+    {
+      "date": "2026-07-22",
+      "xau": 4129.1,
+      "thb": 33.6978,
       "bar_sell": 63700
     }
   ],
@@ -348,11 +354,15 @@
     ]
   },
   "odds": {
-    "up": 49,
-    "side": 26,
-    "down": 25,
+    "up": 57,
+    "side": 22,
+    "down": 21,
     "summary": "สัญญาณ 7 วันเอียงขึ้น — ปัจจัยหลักคือทิศทางค่าเงินบาทและโมเมนตัมทองโลก",
     "signals": [
+      [
+        "บาทอ่อนค่า หนุนทองบาท",
+        "green"
+      ],
       [
         "ทองโลกขึ้นรายวัน",
         "green"
@@ -369,8 +379,8 @@
   },
   "tech": {
     "r2": 4200,
-    "r1": 4075,
-    "s1": 4025,
+    "r1": 4150,
+    "s1": 4100,
     "s2": 3975,
     "range_lo": 3996,
     "range_hi": 4148
