@@ -1,8 +1,8 @@
 {
   "meta": {
-    "updated_iso": "2026-07-22T17:39:02.975436+07:00",
-    "updated_date": "2026-07-22",
-    "updated_th": "22 ก.ค. 2569 เวลา 17:39 น.",
+    "updated_iso": "2026-07-23T11:25:47.194282+07:00",
+    "updated_date": "2026-07-23",
+    "updated_th": "23 ก.ค. 2569 เวลา 11:25 น.",
     "gta_round": "4",
     "gta_time_th": "14/07/2569 เวลา 09:59 น.",
     "source_thai": "stale",
@@ -19,10 +19,10 @@
     "bar_buy_prev": 64800
   },
   "spot": {
-    "xau_usd": 4119.2,
-    "xau_usd_prev": 4056.0,
-    "usd_thb": 33.6978,
-    "usd_thb_prev": 33.6459,
+    "xau_usd": 4129.2,
+    "xau_usd_prev": 4119.2,
+    "usd_thb": 33.7835,
+    "usd_thb_prev": 33.6978,
     "london_am": 4070.95,
     "london_pm": 4039.75,
     "newyork": 4016.44
@@ -173,6 +173,12 @@
       "date": "2026-07-22",
       "xau": 4119.2,
       "thb": 33.6978,
+      "bar_sell": 63700
+    },
+    {
+      "date": "2026-07-23",
+      "xau": 4129.2,
+      "thb": 33.7835,
       "bar_sell": 63700
     }
   ],
