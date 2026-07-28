@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updated_iso": "2026-07-27T18:53:49.081560+07:00",
-    "updated_date": "2026-07-27",
-    "updated_th": "27 ก.ค. 2569 เวลา 18:53 น.",
-    "gta_round": "15",
+    "updated_iso": "2026-07-28T11:19:45.581683+07:00",
+    "updated_date": "2026-07-28",
+    "updated_th": "28 ก.ค. 2569 เวลา 11:19 น.",
+    "gta_round": "3",
     "gta_time_th": "14/07/2569 เวลา 09:59 น.",
     "source_thai": "goldtraders-classic",
     "source_spot": "gold-api.com",
@@ -11,18 +11,18 @@
     "analysis_updated_th": "17 ก.ค. 2569 เวลา 11:53 น."
   },
   "thai_gold": {
-    "bar_sell": 65100.0,
-    "bar_buy": 64900.0,
-    "jewelry_sell": 65900.0,
-    "jewelry_buy": 63596.2,
-    "bar_sell_prev": 64850.0,
-    "bar_buy_prev": 64650.0
+    "bar_sell": 64550.0,
+    "bar_buy": 64350.0,
+    "jewelry_sell": 65350.0,
+    "jewelry_buy": 63065.6,
+    "bar_sell_prev": 65100.0,
+    "bar_buy_prev": 64900.0
   },
   "spot": {
-    "xau_usd": 4096.2,
-    "xau_usd_prev": 4053.7,
-    "usd_thb": 33.6589,
-    "usd_thb_prev": 33.7008,
+    "xau_usd": 4047.7,
+    "xau_usd_prev": 4096.2,
+    "usd_thb": 33.6237,
+    "usd_thb_prev": 33.6589,
     "london_am": 4070.95,
     "london_pm": 4039.75,
     "newyork": 4016.44
@@ -56,7 +56,7 @@
     {
       "label": "ก.ค.",
       "year": 2569,
-      "price": 65100.0,
+      "price": 64550.0,
       "current": true
     }
   ],
@@ -204,6 +204,12 @@
       "xau": 4096.2,
       "thb": 33.6589,
       "bar_sell": 65100.0
+    },
+    {
+      "date": "2026-07-28",
+      "xau": 4047.7,
+      "thb": 33.6237,
+      "bar_sell": 64550.0
     }
   ],
   "analysis": {
@@ -384,29 +390,29 @@
     ]
   },
   "odds": {
-    "up": 40,
+    "up": 24,
     "side": 24,
-    "down": 36,
-    "summary": "สัญญาณ 7 วันเอียงขึ้น — ปัจจัยหลักคือทิศทางค่าเงินบาทและโมเมนตัมทองโลก",
+    "down": 52,
+    "summary": "สัญญาณ 7 วันเอียงลง — แรงกดดันจากค่าเงินบาท/ทองโลกอ่อนตัว",
     "signals": [
       [
         "บาทแข็งค่า กดทองบาท",
         "red"
       ],
       [
-        "ทองโลกขึ้นรายวัน",
-        "green"
+        "ทองโลกลงรายวัน",
+        "red"
       ],
       [
-        "ยืนเหนือค่าเฉลี่ย 5 วัน",
-        "green"
+        "หลุดค่าเฉลี่ย 5 วัน",
+        "red"
       ]
     ]
   },
   "tech": {
     "r2": 4200,
-    "r1": 4125,
-    "s1": 4075,
+    "r1": 4075,
+    "s1": 4025,
     "s2": 3975,
     "range_lo": 3996,
     "range_hi": 4148
