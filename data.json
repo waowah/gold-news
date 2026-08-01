@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updated_iso": "2026-07-31T18:07:23.337289+07:00",
-    "updated_date": "2026-07-31",
-    "updated_th": "31 ก.ค. 2569 เวลา 18:07 น.",
-    "gta_round": "20",
+    "updated_iso": "2026-08-01T11:28:48.501688+07:00",
+    "updated_date": "2026-08-01",
+    "updated_th": "1 ส.ค. 2569 เวลา 11:28 น.",
+    "gta_round": "1",
     "gta_time_th": "14/07/2569 เวลา 09:59 น.",
     "source_thai": "goldtraders-classic",
     "source_spot": "gold-api.com",
@@ -15,24 +15,19 @@
     "bar_buy": 63950.0,
     "jewelry_sell": 64950.0,
     "jewelry_buy": 62671.44,
-    "bar_sell_prev": 64750.0,
-    "bar_buy_prev": 64550.0
+    "bar_sell_prev": 64150.0,
+    "bar_buy_prev": 63950.0
   },
   "spot": {
-    "xau_usd": 4055.7,
-    "xau_usd_prev": 4079.0,
-    "usd_thb": 33.4708,
-    "usd_thb_prev": 33.5256,
+    "xau_usd": 4043.7,
+    "xau_usd_prev": 4055.7,
+    "usd_thb": 33.4452,
+    "usd_thb_prev": 33.4708,
     "london_am": 4070.95,
     "london_pm": 4039.75,
     "newyork": 4016.44
   },
   "monthly_bar_sell": [
-    {
-      "label": "ก.พ.",
-      "year": 2569,
-      "price": 70500
-    },
     {
       "label": "มี.ค.",
       "year": 2569,
@@ -55,6 +50,11 @@
     },
     {
       "label": "ก.ค.",
+      "year": 2569,
+      "price": 64150.0
+    },
+    {
+      "label": "ส.ค.",
       "year": 2569,
       "price": 64150.0,
       "current": true
@@ -228,6 +228,12 @@
       "xau": 4055.7,
       "thb": 33.4708,
       "bar_sell": 64150.0
+    },
+    {
+      "date": "2026-08-01",
+      "xau": 4043.7,
+      "thb": 33.4452,
+      "bar_sell": 64150.0
     }
   ],
   "analysis": {
@@ -393,40 +399,32 @@
     ]
   },
   "volatility": {
-    "sd_pct": 2.7,
-    "mean": 67600,
-    "lo": 64130,
-    "hi": 71070,
+    "sd_pct": 2.3,
+    "mean": 66330,
+    "lo": 63434,
+    "hi": 69226,
     "level": "ต่ำ (Low)",
-    "vs_norm": -0.3,
+    "vs_norm": -0.7,
     "closed": [
-      70500,
       67800,
       68050,
       66050,
-      65600
+      65600,
+      64150.0
     ]
   },
   "odds": {
-    "up": 21,
-    "side": 22,
-    "down": 57,
+    "up": 28,
+    "side": 28,
+    "down": 44,
     "summary": "สัญญาณ 7 วันเอียงลง — แรงกดดันจากค่าเงินบาท/ทองโลกอ่อนตัว",
     "signals": [
-      [
-        "บาทแข็งค่า กดทองบาท",
-        "red"
-      ],
       [
         "ทองโลกลงรายวัน",
         "red"
       ],
       [
         "หลุดค่าเฉลี่ย 5 วัน",
-        "red"
-      ],
-      [
-        "โมเมนตัมรายสัปดาห์ลบ",
         "red"
       ]
     ]
