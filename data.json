@@ -1,8 +1,8 @@
 {
   "meta": {
-    "updated_iso": "2026-08-08T16:11:48.306759+07:00",
-    "updated_date": "2026-08-08",
-    "updated_th": "8 ส.ค. 2569 เวลา 16:11 น.",
+    "updated_iso": "2026-08-09T10:05:44.982713+07:00",
+    "updated_date": "2026-08-09",
+    "updated_th": "9 ส.ค. 2569 เวลา 10:05 น.",
     "gta_round": "1",
     "gta_time_th": "14/07/2569 เวลา 09:59 น.",
     "source_thai": "goldtraders-classic",
@@ -15,14 +15,14 @@
     "bar_buy": 67650.0,
     "jewelry_sell": 68650.0,
     "jewelry_buy": 66294.68,
-    "bar_sell_prev": 67300.0,
-    "bar_buy_prev": 67100.0
+    "bar_sell_prev": 67850.0,
+    "bar_buy_prev": 67650.0
   },
   "spot": {
     "xau_usd": 4343.3,
-    "xau_usd_prev": 4304.9,
-    "usd_thb": 33.0018,
-    "usd_thb_prev": 33.0863,
+    "xau_usd_prev": 4343.3,
+    "usd_thb": 33.0117,
+    "usd_thb_prev": 33.0018,
     "london_am": 4070.95,
     "london_pm": 4039.75,
     "newyork": 4016.44
@@ -276,6 +276,12 @@
       "xau": 4343.3,
       "thb": 33.0018,
       "bar_sell": 67850.0
+    },
+    {
+      "date": "2026-08-09",
+      "xau": 4343.3,
+      "thb": 33.0117,
+      "bar_sell": 67850.0
     }
   ],
   "analysis": {
@@ -456,19 +462,11 @@
     ]
   },
   "odds": {
-    "up": 45,
-    "side": 22,
-    "down": 33,
+    "up": 43,
+    "side": 29,
+    "down": 28,
     "summary": "สัญญาณ 7 วันเอียงขึ้น — ปัจจัยหลักคือทิศทางค่าเงินบาทและโมเมนตัมทองโลก",
     "signals": [
-      [
-        "บาทแข็งค่า กดทองบาท",
-        "red"
-      ],
-      [
-        "ทองโลกขึ้นรายวัน",
-        "green"
-      ],
       [
         "ยืนเหนือค่าเฉลี่ย 5 วัน",
         "green"
