@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updated_iso": "2026-08-09T10:54:06.946023+07:00",
+    "updated_iso": "2026-08-09T16:13:00.014847+07:00",
     "updated_date": "2026-08-09",
-    "updated_th": "9 ส.ค. 2569 เวลา 10:54 น.",
-    "gta_round": "1",
+    "updated_th": "9 ส.ค. 2569 เวลา 16:13 น.",
+    "gta_round": "2",
     "gta_time_th": "14/07/2569 เวลา 09:59 น.",
     "source_thai": "goldtraders-classic",
     "source_spot": "gold-api.com",
@@ -11,10 +11,10 @@
     "analysis_updated_th": "17 ก.ค. 2569 เวลา 11:53 น."
   },
   "thai_gold": {
-    "bar_sell": 67850.0,
-    "bar_buy": 67650.0,
-    "jewelry_sell": 68650.0,
-    "jewelry_buy": 66294.68,
+    "bar_sell": 67900.0,
+    "bar_buy": 67700.0,
+    "jewelry_sell": 68700.0,
+    "jewelry_buy": 66340.16,
     "bar_sell_prev": 67850.0,
     "bar_buy_prev": 67650.0
   },
@@ -56,7 +56,7 @@
     {
       "label": "ส.ค.",
       "year": 2569,
-      "price": 67850.0,
+      "price": 67900.0,
       "current": true
     }
   ],
@@ -281,7 +281,7 @@
       "date": "2026-08-09",
       "xau": 4343.3,
       "thb": 33.0117,
-      "bar_sell": 67850.0
+      "bar_sell": 67900.0
     }
   ],
   "analysis": {
