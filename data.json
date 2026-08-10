@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updated_iso": "2026-08-09T16:13:00.014847+07:00",
-    "updated_date": "2026-08-09",
-    "updated_th": "9 ส.ค. 2569 เวลา 16:13 น.",
-    "gta_round": "2",
+    "updated_iso": "2026-08-10T10:16:52.632447+07:00",
+    "updated_date": "2026-08-10",
+    "updated_th": "10 ส.ค. 2569 เวลา 10:16 น.",
+    "gta_round": "5",
     "gta_time_th": "14/07/2569 เวลา 09:59 น.",
     "source_thai": "goldtraders-classic",
     "source_spot": "gold-api.com",
@@ -11,18 +11,18 @@
     "analysis_updated_th": "17 ก.ค. 2569 เวลา 11:53 น."
   },
   "thai_gold": {
-    "bar_sell": 67900.0,
-    "bar_buy": 67700.0,
-    "jewelry_sell": 68700.0,
-    "jewelry_buy": 66340.16,
-    "bar_sell_prev": 67850.0,
-    "bar_buy_prev": 67650.0
+    "bar_sell": 67550.0,
+    "bar_buy": 67350.0,
+    "jewelry_sell": 68350.0,
+    "jewelry_buy": 66006.64,
+    "bar_sell_prev": 67900.0,
+    "bar_buy_prev": 67700.0
   },
   "spot": {
-    "xau_usd": 4343.3,
+    "xau_usd": 4321.3,
     "xau_usd_prev": 4343.3,
-    "usd_thb": 33.0117,
-    "usd_thb_prev": 33.0018,
+    "usd_thb": 33.0243,
+    "usd_thb_prev": 33.0117,
     "london_am": 4070.95,
     "london_pm": 4039.75,
     "newyork": 4016.44
@@ -56,7 +56,7 @@
     {
       "label": "ส.ค.",
       "year": 2569,
-      "price": 67900.0,
+      "price": 67550.0,
       "current": true
     }
   ],
@@ -282,6 +282,12 @@
       "xau": 4343.3,
       "thb": 33.0117,
       "bar_sell": 67900.0
+    },
+    {
+      "date": "2026-08-10",
+      "xau": 4321.3,
+      "thb": 33.0243,
+      "bar_sell": 67550.0
     }
   ],
   "analysis": {
@@ -462,11 +468,15 @@
     ]
   },
   "odds": {
-    "up": 43,
-    "side": 29,
-    "down": 28,
+    "up": 40,
+    "side": 26,
+    "down": 34,
     "summary": "สัญญาณ 7 วันเอียงขึ้น — ปัจจัยหลักคือทิศทางค่าเงินบาทและโมเมนตัมทองโลก",
     "signals": [
+      [
+        "ทองโลกลงรายวัน",
+        "red"
+      ],
       [
         "ยืนเหนือค่าเฉลี่ย 5 วัน",
         "green"
@@ -479,8 +489,8 @@
   },
   "tech": {
     "r2": 4400,
-    "r1": 4375,
-    "s1": 4325,
+    "r1": 4350,
+    "s1": 4300,
     "s2": 3975,
     "range_lo": 3996,
     "range_hi": 4343
