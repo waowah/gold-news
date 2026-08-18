@@ -1,10 +1,10 @@
 {
   "meta": {
-    "updated_iso": "2026-08-18T10:10:51.343949+07:00",
+    "updated_iso": "2026-08-18T16:04:55.346516+07:00",
     "updated_date": "2026-08-18",
-    "updated_th": "18 ส.ค. 2569 เวลา 10:10 น.",
+    "updated_th": "18 ส.ค. 2569 เวลา 16:04 น.",
     "gta_round": "",
-    "gta_time_th": "18/08/2569 เวลา 09:35 น. (ครั้งที่ 3)",
+    "gta_time_th": "18/08/2569 เวลา 16:00 น. (ครั้งที่ 11)",
     "source_thai": "chnwt-api",
     "source_spot": "gold-api.com",
     "notes": "14 Jul (Tue): GTA classic posted fresh round-4 price at 09:59 Bangkok (63,700/63,500), first live update since Saturday 11/07 -- ends the multi-day stale streak. Bar sell down THB1,300 (-2.0%) vs the carried-over Saturday price. Spot XAU/USD (gold-api.com) at $4,059.90 (-1.3% vs prior read) and USD/THB (er-api.com) roughly flat at 33.34.",
@@ -19,7 +19,7 @@
     "bar_buy_prev": 68500.0
   },
   "spot": {
-    "xau_usd": 4402.7,
+    "xau_usd": 4394.1,
     "xau_usd_prev": 4400.6,
     "usd_thb": 33.0251,
     "usd_thb_prev": 33.1363,
@@ -297,7 +297,7 @@
     },
     {
       "date": "2026-08-18",
-      "xau": 4402.7,
+      "xau": 4394.1,
       "thb": 33.0251,
       "bar_sell": 68800.0
     }
@@ -480,18 +480,18 @@
     ]
   },
   "odds": {
-    "up": 45,
+    "up": 36,
     "side": 22,
-    "down": 33,
-    "summary": "สัญญาณ 7 วันเอียงขึ้น — ปัจจัยหลักคือทิศทางค่าเงินบาทและโมเมนตัมทองโลก",
+    "down": 42,
+    "summary": "สัญญาณ 7 วันเอียงลง — แรงกดดันจากค่าเงินบาท/ทองโลกอ่อนตัว",
     "signals": [
       [
         "บาทแข็งค่า กดทองบาท",
         "red"
       ],
       [
-        "ทองโลกขึ้นรายวัน",
-        "green"
+        "ทองโลกลงรายวัน",
+        "red"
       ],
       [
         "ยืนเหนือค่าเฉลี่ย 5 วัน",
