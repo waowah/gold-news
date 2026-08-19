@@ -1,28 +1,28 @@
 {
   "meta": {
-    "updated_iso": "2026-08-18T16:04:55.346516+07:00",
-    "updated_date": "2026-08-18",
-    "updated_th": "18 ส.ค. 2569 เวลา 16:04 น.",
+    "updated_iso": "2026-08-19T09:21:38.965866+07:00",
+    "updated_date": "2026-08-19",
+    "updated_th": "19 ส.ค. 2569 เวลา 09:21 น.",
     "gta_round": "",
-    "gta_time_th": "18/08/2569 เวลา 16:00 น. (ครั้งที่ 11)",
+    "gta_time_th": "19/08/2569 เวลา 09:00 น. (ครั้งที่ 1)",
     "source_thai": "chnwt-api",
     "source_spot": "gold-api.com",
     "notes": "14 Jul (Tue): GTA classic posted fresh round-4 price at 09:59 Bangkok (63,700/63,500), first live update since Saturday 11/07 -- ends the multi-day stale streak. Bar sell down THB1,300 (-2.0%) vs the carried-over Saturday price. Spot XAU/USD (gold-api.com) at $4,059.90 (-1.3% vs prior read) and USD/THB (er-api.com) roughly flat at 33.34.",
     "analysis_updated_th": "17 ก.ค. 2569 เวลา 11:53 น."
   },
   "thai_gold": {
-    "bar_sell": 68800.0,
-    "bar_buy": 68600.0,
-    "jewelry_sell": 69600.0,
-    "jewelry_buy": 67234.6,
-    "bar_sell_prev": 68700.0,
-    "bar_buy_prev": 68500.0
+    "bar_sell": 68350.0,
+    "bar_buy": 68150.0,
+    "jewelry_sell": 69150.0,
+    "jewelry_buy": 66779.8,
+    "bar_sell_prev": 68800.0,
+    "bar_buy_prev": 68600.0
   },
   "spot": {
-    "xau_usd": 4394.1,
-    "xau_usd_prev": 4400.6,
-    "usd_thb": 33.0251,
-    "usd_thb_prev": 33.1363,
+    "xau_usd": 4360.7,
+    "xau_usd_prev": 4394.1,
+    "usd_thb": 33.0871,
+    "usd_thb_prev": 33.0251,
     "london_am": 4070.95,
     "london_pm": 4039.75,
     "newyork": 4016.44
@@ -56,17 +56,11 @@
     {
       "label": "ส.ค.",
       "year": 2569,
-      "price": 68800.0,
+      "price": 68350.0,
       "current": true
     }
   ],
   "spot_history": [
-    {
-      "date": "2026-07-10",
-      "xau": 4106.8,
-      "thb": 33.414,
-      "bar_sell": 65000
-    },
     {
       "date": "2026-07-11",
       "xau": 4121.4,
@@ -300,6 +294,12 @@
       "xau": 4394.1,
       "thb": 33.0251,
       "bar_sell": 68800.0
+    },
+    {
+      "date": "2026-08-19",
+      "xau": 4360.7,
+      "thb": 33.0871,
+      "bar_sell": 68350.0
     }
   ],
   "analysis": {
@@ -481,32 +481,28 @@
   },
   "odds": {
     "up": 36,
-    "side": 22,
-    "down": 42,
+    "side": 24,
+    "down": 40,
     "summary": "สัญญาณ 7 วันเอียงลง — แรงกดดันจากค่าเงินบาท/ทองโลกอ่อนตัว",
     "signals": [
       [
-        "บาทแข็งค่า กดทองบาท",
-        "red"
+        "บาทอ่อนค่า หนุนทองบาท",
+        "green"
       ],
       [
         "ทองโลกลงรายวัน",
         "red"
       ],
       [
-        "ยืนเหนือค่าเฉลี่ย 5 วัน",
-        "green"
-      ],
-      [
-        "โมเมนตัมรายสัปดาห์บวก",
-        "green"
+        "หลุดค่าเฉลี่ย 5 วัน",
+        "red"
       ]
     ]
   },
   "tech": {
     "r2": 4475,
-    "r1": 4425,
-    "s1": 4375,
+    "r1": 4375,
+    "s1": 4325,
     "s2": 3975,
     "range_lo": 3996,
     "range_hi": 4417
