@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updated_iso": "2026-08-20T16:07:02.992943+07:00",
-    "updated_date": "2026-08-20",
-    "updated_th": "20 ส.ค. 2569 เวลา 16:07 น.",
-    "gta_round": "24",
+    "updated_iso": "2026-08-21T09:34:49.020355+07:00",
+    "updated_date": "2026-08-21",
+    "updated_th": "21 ส.ค. 2569 เวลา 09:34 น.",
+    "gta_round": "3",
     "gta_time_th": "19/08/2569 เวลา 15:10 น. (ครั้งที่ 19)",
     "source_thai": "goldtraders-classic",
     "source_spot": "gold-api.com",
@@ -11,18 +11,18 @@
     "analysis_updated_th": "17 ก.ค. 2569 เวลา 11:53 น."
   },
   "thai_gold": {
-    "bar_sell": 69800.0,
-    "bar_buy": 69600.0,
-    "jewelry_sell": 70600.0,
-    "jewelry_buy": 68204.84,
-    "bar_sell_prev": 68250.0,
-    "bar_buy_prev": 68050.0
+    "bar_sell": 70300.0,
+    "bar_buy": 70100.0,
+    "jewelry_sell": 71100.0,
+    "jewelry_buy": 68705.12,
+    "bar_sell_prev": 69800.0,
+    "bar_buy_prev": 69600.0
   },
   "spot": {
-    "xau_usd": 4490.3,
-    "xau_usd_prev": 4358.7,
-    "usd_thb": 32.9536,
-    "usd_thb_prev": 33.0871,
+    "xau_usd": 4526.9,
+    "xau_usd_prev": 4490.3,
+    "usd_thb": 32.8612,
+    "usd_thb_prev": 32.9536,
     "london_am": 4070.95,
     "london_pm": 4039.75,
     "newyork": 4016.44
@@ -56,17 +56,11 @@
     {
       "label": "ส.ค.",
       "year": 2569,
-      "price": 69800.0,
+      "price": 70300.0,
       "current": true
     }
   ],
   "spot_history": [
-    {
-      "date": "2026-07-12",
-      "xau": 4121.4,
-      "thb": 33.309,
-      "bar_sell": 65000
-    },
     {
       "date": "2026-07-13",
       "xau": 4065.3,
@@ -300,6 +294,12 @@
       "xau": 4490.3,
       "thb": 32.9536,
       "bar_sell": 69800.0
+    },
+    {
+      "date": "2026-08-21",
+      "xau": 4526.9,
+      "thb": 32.8612,
+      "bar_sell": 70300.0
     }
   ],
   "analysis": {
@@ -504,11 +504,11 @@
     ]
   },
   "tech": {
-    "r2": 4550,
-    "r1": 4525,
-    "s1": 4475,
+    "r2": 4575,
+    "r1": 4550,
+    "s1": 4500,
     "s2": 3975,
     "range_lo": 3996,
-    "range_hi": 4490
+    "range_hi": 4526
   }
 }
