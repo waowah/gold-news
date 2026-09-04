@@ -1,28 +1,28 @@
 {
   "meta": {
-    "updated_iso": "2026-09-03T19:57:46.002655+07:00",
-    "updated_date": "2026-09-03",
-    "updated_th": "3 ก.ย. 2569 เวลา 19:57 น.",
+    "updated_iso": "2026-09-04T12:46:31.135409+07:00",
+    "updated_date": "2026-09-04",
+    "updated_th": "4 ก.ย. 2569 เวลา 12:46 น.",
     "gta_round": "",
-    "gta_time_th": "03/09/2569 เวลา 16:46 น. (ครั้งที่ 27)",
+    "gta_time_th": "04/09/2569 เวลา 12:12 น. (ครั้งที่ 7)",
     "source_thai": "chnwt-api",
-    "source_spot": "gold-api.com",
+    "source_spot": "cache",
     "notes": "14 Jul (Tue): GTA classic posted fresh round-4 price at 09:59 Bangkok (63,700/63,500), first live update since Saturday 11/07 -- ends the multi-day stale streak. Bar sell down THB1,300 (-2.0%) vs the carried-over Saturday price. Spot XAU/USD (gold-api.com) at $4,059.90 (-1.3% vs prior read) and USD/THB (er-api.com) roughly flat at 33.34.",
     "analysis_updated_th": "17 ก.ค. 2569 เวลา 11:53 น."
   },
   "thai_gold": {
-    "bar_sell": 69200.0,
-    "bar_buy": 69000.0,
-    "jewelry_sell": 70000.0,
-    "jewelry_buy": 67613.6,
-    "bar_sell_prev": 68050.0,
-    "bar_buy_prev": 67850.0
+    "bar_sell": 69700.0,
+    "bar_buy": 69500.0,
+    "jewelry_sell": 70500.0,
+    "jewelry_buy": 68113.88,
+    "bar_sell_prev": 69200.0,
+    "bar_buy_prev": 69000.0
   },
   "spot": {
     "xau_usd": 4494.2,
     "xau_usd_prev": 4334.7,
-    "usd_thb": 33.2062,
-    "usd_thb_prev": 33.2592,
+    "usd_thb": 32.9424,
+    "usd_thb_prev": 33.2062,
     "london_am": 4070.95,
     "london_pm": 4039.75,
     "newyork": 4016.44
@@ -56,17 +56,11 @@
     {
       "label": "ก.ย.",
       "year": 2569,
-      "price": 69200.0,
+      "price": 69700.0,
       "current": true
     }
   ],
   "spot_history": [
-    {
-      "date": "2026-07-26",
-      "xau": 4053.7,
-      "thb": 33.7008,
-      "bar_sell": 64850.0
-    },
     {
       "date": "2026-07-27",
       "xau": 4096.2,
@@ -300,6 +294,12 @@
       "xau": 4494.2,
       "thb": 33.2062,
       "bar_sell": 69200.0
+    },
+    {
+      "date": "2026-09-04",
+      "xau": 4494.2,
+      "thb": 32.9424,
+      "bar_sell": 69700.0
     }
   ],
   "analysis": {
