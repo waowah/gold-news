@@ -1,10 +1,10 @@
 {
   "meta": {
-    "updated_iso": "2026-09-05T18:58:23.114639+07:00",
-    "updated_date": "2026-09-05",
-    "updated_th": "5 ก.ย. 2569 เวลา 18:58 น.",
+    "updated_iso": "2026-09-06T12:49:36.523896+07:00",
+    "updated_date": "2026-09-06",
+    "updated_th": "6 ก.ย. 2569 เวลา 12:49 น.",
     "gta_round": "",
-    "gta_time_th": "05/09/2569 เวลา 09:04 น. (ครั้งที่ 1)",
+    "gta_time_th": "06/09/2569 เวลา 09:30 น. (ครั้งที่ 1)",
     "source_thai": "chnwt-api",
     "source_spot": "gold-api.com",
     "notes": "14 Jul (Tue): GTA classic posted fresh round-4 price at 09:59 Bangkok (63,700/63,500), first live update since Saturday 11/07 -- ends the multi-day stale streak. Bar sell down THB1,300 (-2.0%) vs the carried-over Saturday price. Spot XAU/USD (gold-api.com) at $4,059.90 (-1.3% vs prior read) and USD/THB (er-api.com) roughly flat at 33.34.",
@@ -15,14 +15,14 @@
     "bar_buy": 68950.0,
     "jewelry_sell": 69950.0,
     "jewelry_buy": 67568.12,
-    "bar_sell_prev": 69650.0,
-    "bar_buy_prev": 69450.0
+    "bar_sell_prev": 69150.0,
+    "bar_buy_prev": 68950.0
   },
   "spot": {
     "xau_usd": 4431.1,
-    "xau_usd_prev": 4403.0,
-    "usd_thb": 32.9145,
-    "usd_thb_prev": 32.9424,
+    "xau_usd_prev": 4431.1,
+    "usd_thb": 32.916,
+    "usd_thb_prev": 32.9145,
     "london_am": 4070.95,
     "london_pm": 4039.75,
     "newyork": 4016.44
@@ -61,12 +61,6 @@
     }
   ],
   "spot_history": [
-    {
-      "date": "2026-07-28",
-      "xau": 4029.3,
-      "thb": 33.6237,
-      "bar_sell": 64150.0
-    },
     {
       "date": "2026-07-29",
       "xau": 4029.4,
@@ -300,6 +294,12 @@
       "xau": 4431.1,
       "thb": 32.9145,
       "bar_sell": 69150.0
+    },
+    {
+      "date": "2026-09-06",
+      "xau": 4431.1,
+      "thb": 32.916,
+      "bar_sell": 69150.0
     }
   ],
   "analysis": {
@@ -480,15 +480,11 @@
     ]
   },
   "odds": {
-    "up": 49,
-    "side": 26,
-    "down": 25,
+    "up": 43,
+    "side": 29,
+    "down": 28,
     "summary": "สัญญาณ 7 วันเอียงขึ้น — ปัจจัยหลักคือทิศทางค่าเงินบาทและโมเมนตัมทองโลก",
     "signals": [
-      [
-        "ทองโลกขึ้นรายวัน",
-        "green"
-      ],
       [
         "ยืนเหนือค่าเฉลี่ย 5 วัน",
         "green"
