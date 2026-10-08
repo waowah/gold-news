@@ -1,25 +1,25 @@
 {
   "meta": {
-    "updated_iso": "2026-10-08T16:05:18.296894+07:00",
+    "updated_iso": "2026-10-08T22:48:27.069088+07:00",
     "updated_date": "2026-10-08",
-    "updated_th": "8 ต.ค. 2569 เวลา 16:05 น.",
+    "updated_th": "8 ต.ค. 2569 เวลา 22:48 น.",
     "gta_round": "",
-    "gta_time_th": "08/10/2569 เวลา 16:03 น. (ครั้งที่ 15)",
+    "gta_time_th": "08/10/2569 เวลา 16:18 น. (ครั้งที่ 16)",
     "source_thai": "chnwt-api",
     "source_spot": "gold-api.com",
     "notes": "14 Jul (Tue): GTA classic posted fresh round-4 price at 09:59 Bangkok (63,700/63,500), first live update since Saturday 11/07 -- ends the multi-day stale streak. Bar sell down THB1,300 (-2.0%) vs the carried-over Saturday price. Spot XAU/USD (gold-api.com) at $4,059.90 (-1.3% vs prior read) and USD/THB (er-api.com) roughly flat at 33.34.",
     "analysis_updated_th": "17 ก.ค. 2569 เวลา 11:53 น."
   },
   "thai_gold": {
-    "bar_sell": 65800.0,
-    "bar_buy": 65600.0,
-    "jewelry_sell": 66600.0,
-    "jewelry_buy": 64293.56,
+    "bar_sell": 65750.0,
+    "bar_buy": 65550.0,
+    "jewelry_sell": 66550.0,
+    "jewelry_buy": 64232.92,
     "bar_sell_prev": 65750.0,
     "bar_buy_prev": 65550.0
   },
   "spot": {
-    "xau_usd": 4131.4,
+    "xau_usd": 4117.1,
     "xau_usd_prev": 4109.6,
     "usd_thb": 33.6593,
     "usd_thb_prev": 33.6139,
@@ -56,7 +56,7 @@
     {
       "label": "ต.ค.",
       "year": 2569,
-      "price": 65800.0,
+      "price": 65750.0,
       "current": true
     }
   ],
@@ -297,9 +297,9 @@
     },
     {
       "date": "2026-10-08",
-      "xau": 4131.4,
+      "xau": 4117.1,
       "thb": 33.6593,
-      "bar_sell": 65800.0
+      "bar_sell": 65750.0
     }
   ],
   "analysis": {
@@ -480,9 +480,9 @@
     ]
   },
   "odds": {
-    "up": 45,
-    "side": 24,
-    "down": 31,
+    "up": 42,
+    "side": 22,
+    "down": 36,
     "summary": "สัญญาณ 7 วันเอียงขึ้น — ปัจจัยหลักคือทิศทางค่าเงินบาทและโมเมนตัมทองโลก",
     "signals": [
       [
@@ -495,6 +495,10 @@
       ],
       [
         "หลุดค่าเฉลี่ย 5 วัน",
+        "red"
+      ],
+      [
+        "โมเมนตัมรายสัปดาห์ลบ",
         "red"
       ]
     ]
