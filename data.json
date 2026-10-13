@@ -1,25 +1,25 @@
 {
   "meta": {
-    "updated_iso": "2026-10-13T14:38:27.291228+07:00",
+    "updated_iso": "2026-10-13T16:30:29.327876+07:00",
     "updated_date": "2026-10-13",
-    "updated_th": "13 ต.ค. 2569 เวลา 14:38 น.",
+    "updated_th": "13 ต.ค. 2569 เวลา 16:30 น.",
     "gta_round": "",
-    "gta_time_th": "13/10/2569 เวลา 13:48 น. (ครั้งที่ 13)",
+    "gta_time_th": "13/10/2569 เวลา 15:07 น. (ครั้งที่ 14)",
     "source_thai": "chnwt-api",
     "source_spot": "gold-api.com",
     "notes": "14 Jul (Tue): GTA classic posted fresh round-4 price at 09:59 Bangkok (63,700/63,500), first live update since Saturday 11/07 -- ends the multi-day stale streak. Bar sell down THB1,300 (-2.0%) vs the carried-over Saturday price. Spot XAU/USD (gold-api.com) at $4,059.90 (-1.3% vs prior read) and USD/THB (er-api.com) roughly flat at 33.34.",
     "analysis_updated_th": "17 ก.ค. 2569 เวลา 11:53 น."
   },
   "thai_gold": {
-    "bar_sell": 66550.0,
-    "bar_buy": 66350.0,
-    "jewelry_sell": 67350.0,
-    "jewelry_buy": 65021.24,
+    "bar_sell": 66500.0,
+    "bar_buy": 66300.0,
+    "jewelry_sell": 67300.0,
+    "jewelry_buy": 64975.76,
     "bar_sell_prev": 66500.0,
     "bar_buy_prev": 66300.0
   },
   "spot": {
-    "xau_usd": 4191.0,
+    "xau_usd": 4184.1,
     "xau_usd_prev": 4176.5,
     "usd_thb": 33.6183,
     "usd_thb_prev": 33.5341,
@@ -56,7 +56,7 @@
     {
       "label": "ต.ค.",
       "year": 2569,
-      "price": 66550.0,
+      "price": 66500.0,
       "current": true
     }
   ],
@@ -297,9 +297,9 @@
     },
     {
       "date": "2026-10-13",
-      "xau": 4191.0,
+      "xau": 4184.1,
       "thb": 33.6183,
-      "bar_sell": 66550.0
+      "bar_sell": 66500.0
     }
   ],
   "analysis": {
@@ -480,9 +480,9 @@
     ]
   },
   "odds": {
-    "up": 52,
+    "up": 45,
     "side": 24,
-    "down": 24,
+    "down": 31,
     "summary": "สัญญาณ 7 วันเอียงขึ้น — ปัจจัยหลักคือทิศทางค่าเงินบาทและโมเมนตัมทองโลก",
     "signals": [
       [
@@ -494,15 +494,15 @@
         "green"
       ],
       [
-        "ยืนเหนือค่าเฉลี่ย 5 วัน",
-        "green"
+        "หลุดค่าเฉลี่ย 5 วัน",
+        "red"
       ]
     ]
   },
   "tech": {
     "r2": 4475,
-    "r1": 4225,
-    "s1": 4175,
+    "r1": 4200,
+    "s1": 4150,
     "s2": 4075,
     "range_lo": 4109,
     "range_hi": 4431
