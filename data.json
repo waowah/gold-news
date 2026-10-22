@@ -1,20 +1,20 @@
 {
   "meta": {
-    "updated_iso": "2026-10-22T13:01:23.260845+07:00",
+    "updated_iso": "2026-10-22T14:40:46.619961+07:00",
     "updated_date": "2026-10-22",
-    "updated_th": "22 ต.ค. 2569 เวลา 13:01 น.",
+    "updated_th": "22 ต.ค. 2569 เวลา 14:40 น.",
     "gta_round": "",
-    "gta_time_th": "22/10/2569 เวลา 12:59 น. (ครั้งที่ 10)",
+    "gta_time_th": "22/10/2569 เวลา 14:30 น. (ครั้งที่ 17)",
     "source_thai": "chnwt-api",
-    "source_spot": "gold-api.com",
+    "source_spot": "cache",
     "notes": "14 Jul (Tue): GTA classic posted fresh round-4 price at 09:59 Bangkok (63,700/63,500), first live update since Saturday 11/07 -- ends the multi-day stale streak. Bar sell down THB1,300 (-2.0%) vs the carried-over Saturday price. Spot XAU/USD (gold-api.com) at $4,059.90 (-1.3% vs prior read) and USD/THB (er-api.com) roughly flat at 33.34.",
     "analysis_updated_th": "17 ก.ค. 2569 เวลา 11:53 น."
   },
   "thai_gold": {
-    "bar_sell": 65200.0,
-    "bar_buy": 65000.0,
-    "jewelry_sell": 66000.0,
-    "jewelry_buy": 63702.32,
+    "bar_sell": 65350.0,
+    "bar_buy": 65150.0,
+    "jewelry_sell": 66150.0,
+    "jewelry_buy": 63853.92,
     "bar_sell_prev": 65600.0,
     "bar_buy_prev": 65400.0
   },
@@ -56,7 +56,7 @@
     {
       "label": "ต.ค.",
       "year": 2569,
-      "price": 65200.0,
+      "price": 65350.0,
       "current": true
     }
   ],
@@ -299,7 +299,7 @@
       "date": "2026-10-22",
       "xau": 4090.1,
       "thb": 33.5903,
-      "bar_sell": 65200.0
+      "bar_sell": 65350.0
     }
   ],
   "analysis": {
