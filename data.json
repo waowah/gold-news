@@ -1,25 +1,25 @@
 {
   "meta": {
-    "updated_iso": "2026-10-29T13:57:55.126925+07:00",
+    "updated_iso": "2026-10-29T15:36:30.736336+07:00",
     "updated_date": "2026-10-29",
-    "updated_th": "29 ต.ค. 2569 เวลา 13:57 น.",
+    "updated_th": "29 ต.ค. 2569 เวลา 15:36 น.",
     "gta_round": "",
-    "gta_time_th": "29/10/2569 เวลา 12:47 น. (ครั้งที่ 3)",
+    "gta_time_th": "29/10/2569 เวลา 15:06 น. (ครั้งที่ 9)",
     "source_thai": "chnwt-api",
     "source_spot": "gold-api.com",
     "notes": "14 Jul (Tue): GTA classic posted fresh round-4 price at 09:59 Bangkok (63,700/63,500), first live update since Saturday 11/07 -- ends the multi-day stale streak. Bar sell down THB1,300 (-2.0%) vs the carried-over Saturday price. Spot XAU/USD (gold-api.com) at $4,059.90 (-1.3% vs prior read) and USD/THB (er-api.com) roughly flat at 33.34.",
     "analysis_updated_th": "17 ก.ค. 2569 เวลา 11:53 น."
   },
   "thai_gold": {
-    "bar_sell": 64500.0,
-    "bar_buy": 64300.0,
-    "jewelry_sell": 65300.0,
-    "jewelry_buy": 63020.12,
+    "bar_sell": 64450.0,
+    "bar_buy": 64250.0,
+    "jewelry_sell": 65250.0,
+    "jewelry_buy": 62959.48,
     "bar_sell_prev": 64800.0,
     "bar_buy_prev": 64600.0
   },
   "spot": {
-    "xau_usd": 4035.7,
+    "xau_usd": 4029.2,
     "xau_usd_prev": 4050.5,
     "usd_thb": 33.7721,
     "usd_thb_prev": 33.7724,
@@ -56,7 +56,7 @@
     {
       "label": "ต.ค.",
       "year": 2569,
-      "price": 64500.0,
+      "price": 64450.0,
       "current": true
     }
   ],
@@ -297,9 +297,9 @@
     },
     {
       "date": "2026-10-29",
-      "xau": 4035.7,
+      "xau": 4029.2,
       "thb": 33.7721,
-      "bar_sell": 64500.0
+      "bar_sell": 64450.0
     }
   ],
   "analysis": {
@@ -480,18 +480,18 @@
     ]
   },
   "odds": {
-    "up": 40,
+    "up": 32,
     "side": 26,
-    "down": 34,
-    "summary": "สัญญาณ 7 วันเอียงขึ้น — ปัจจัยหลักคือทิศทางค่าเงินบาทและโมเมนตัมทองโลก",
+    "down": 42,
+    "summary": "สัญญาณ 7 วันเอียงลง — แรงกดดันจากค่าเงินบาท/ทองโลกอ่อนตัว",
     "signals": [
       [
         "ทองโลกลงรายวัน",
         "red"
       ],
       [
-        "ยืนเหนือค่าเฉลี่ย 5 วัน",
-        "green"
+        "หลุดค่าเฉลี่ย 5 วัน",
+        "red"
       ],
       [
         "โมเมนตัมรายสัปดาห์บวก",
