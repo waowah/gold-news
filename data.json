@@ -1,27 +1,27 @@
 {
   "meta": {
-    "updated_iso": "2026-11-03T01:44:31.564169+07:00",
+    "updated_iso": "2026-11-03T14:49:19.047965+07:00",
     "updated_date": "2026-11-03",
-    "updated_th": "3 พ.ย. 2569 เวลา 01:44 น.",
+    "updated_th": "3 พ.ย. 2569 เวลา 14:49 น.",
     "gta_round": "",
-    "gta_time_th": "02/11/2569 เวลา 15:59 น. (ครั้งที่ 25)",
+    "gta_time_th": "03/11/2569 เวลา 14:22 น. (ครั้งที่ 18)",
     "source_thai": "chnwt-api",
     "source_spot": "gold-api.com",
     "notes": "14 Jul (Tue): GTA classic posted fresh round-4 price at 09:59 Bangkok (63,700/63,500), first live update since Saturday 11/07 -- ends the multi-day stale streak. Bar sell down THB1,300 (-2.0%) vs the carried-over Saturday price. Spot XAU/USD (gold-api.com) at $4,059.90 (-1.3% vs prior read) and USD/THB (er-api.com) roughly flat at 33.34.",
     "analysis_updated_th": "17 ก.ค. 2569 เวลา 11:53 น."
   },
   "thai_gold": {
-    "bar_sell": 62400.0,
-    "bar_buy": 62200.0,
-    "jewelry_sell": 63200.0,
-    "jewelry_buy": 60958.36,
+    "bar_sell": 62550.0,
+    "bar_buy": 62350.0,
+    "jewelry_sell": 63350.0,
+    "jewelry_buy": 61109.96,
     "bar_sell_prev": 62400.0,
     "bar_buy_prev": 62200.0
   },
   "spot": {
-    "xau_usd": 3955.1,
+    "xau_usd": 3913.8,
     "xau_usd_prev": 3898.8,
-    "usd_thb": 33.7554,
+    "usd_thb": 33.7403,
     "usd_thb_prev": 33.7554,
     "london_am": 4070.95,
     "london_pm": 4039.75,
@@ -56,7 +56,7 @@
     {
       "label": "พ.ย.",
       "year": 2569,
-      "price": 62400.0,
+      "price": 62550.0,
       "current": true
     }
   ],
@@ -297,9 +297,9 @@
     },
     {
       "date": "2026-11-03",
-      "xau": 3955.1,
-      "thb": 33.7554,
-      "bar_sell": 62400.0
+      "xau": 3913.8,
+      "thb": 33.7403,
+      "bar_sell": 62550.0
     }
   ],
   "analysis": {
@@ -480,9 +480,9 @@
     ]
   },
   "odds": {
-    "up": 49,
-    "side": 26,
-    "down": 25,
+    "up": 44,
+    "side": 28,
+    "down": 28,
     "summary": "สัญญาณ 7 วันเอียงขึ้น — ปัจจัยหลักคือทิศทางค่าเงินบาทและโมเมนตัมทองโลก",
     "signals": [
       [
@@ -492,17 +492,13 @@
       [
         "ยืนเหนือค่าเฉลี่ย 5 วัน",
         "green"
-      ],
-      [
-        "โมเมนตัมรายสัปดาห์บวก",
-        "green"
       ]
     ]
   },
   "tech": {
     "r2": 4325,
-    "r1": 3975,
-    "s1": 3925,
+    "r1": 3950,
+    "s1": 3900,
     "s2": 3850,
     "range_lo": 3876,
     "range_hi": 4286
