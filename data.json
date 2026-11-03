@@ -1,25 +1,25 @@
 {
   "meta": {
-    "updated_iso": "2026-11-03T16:39:54.131816+07:00",
+    "updated_iso": "2026-11-03T23:27:10.286903+07:00",
     "updated_date": "2026-11-03",
-    "updated_th": "3 พ.ย. 2569 เวลา 16:39 น.",
+    "updated_th": "3 พ.ย. 2569 เวลา 23:27 น.",
     "gta_round": "",
-    "gta_time_th": "03/11/2569 เวลา 16:24 น. (ครั้งที่ 21)",
+    "gta_time_th": "03/11/2569 เวลา 16:39 น. (ครั้งที่ 22)",
     "source_thai": "chnwt-api",
     "source_spot": "gold-api.com",
     "notes": "14 Jul (Tue): GTA classic posted fresh round-4 price at 09:59 Bangkok (63,700/63,500), first live update since Saturday 11/07 -- ends the multi-day stale streak. Bar sell down THB1,300 (-2.0%) vs the carried-over Saturday price. Spot XAU/USD (gold-api.com) at $4,059.90 (-1.3% vs prior read) and USD/THB (er-api.com) roughly flat at 33.34.",
     "analysis_updated_th": "17 ก.ค. 2569 เวลา 11:53 น."
   },
   "thai_gold": {
-    "bar_sell": 62450.0,
-    "bar_buy": 62250.0,
-    "jewelry_sell": 63250.0,
-    "jewelry_buy": 61003.84,
+    "bar_sell": 62500.0,
+    "bar_buy": 62300.0,
+    "jewelry_sell": 63300.0,
+    "jewelry_buy": 61049.32,
     "bar_sell_prev": 62400.0,
     "bar_buy_prev": 62200.0
   },
   "spot": {
-    "xau_usd": 3909.4,
+    "xau_usd": 3934.2,
     "xau_usd_prev": 3898.8,
     "usd_thb": 33.7403,
     "usd_thb_prev": 33.7554,
@@ -56,7 +56,7 @@
     {
       "label": "พ.ย.",
       "year": 2569,
-      "price": 62450.0,
+      "price": 62500.0,
       "current": true
     }
   ],
@@ -297,9 +297,9 @@
     },
     {
       "date": "2026-11-03",
-      "xau": 3909.4,
+      "xau": 3934.2,
       "thb": 33.7403,
-      "bar_sell": 62450.0
+      "bar_sell": 62500.0
     }
   ],
   "analysis": {
@@ -480,9 +480,9 @@
     ]
   },
   "odds": {
-    "up": 44,
-    "side": 28,
-    "down": 28,
+    "up": 49,
+    "side": 26,
+    "down": 25,
     "summary": "สัญญาณ 7 วันเอียงขึ้น — ปัจจัยหลักคือทิศทางค่าเงินบาทและโมเมนตัมทองโลก",
     "signals": [
       [
@@ -492,13 +492,17 @@
       [
         "ยืนเหนือค่าเฉลี่ย 5 วัน",
         "green"
+      ],
+      [
+        "โมเมนตัมรายสัปดาห์บวก",
+        "green"
       ]
     ]
   },
   "tech": {
     "r2": 4325,
-    "r1": 3925,
-    "s1": 3875,
+    "r1": 3950,
+    "s1": 3900,
     "s2": 3850,
     "range_lo": 3876,
     "range_hi": 4286
