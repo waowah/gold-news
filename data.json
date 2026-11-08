@@ -1,10 +1,10 @@
 {
   "meta": {
-    "updated_iso": "2026-11-07T22:01:34.611971+07:00",
-    "updated_date": "2026-11-07",
-    "updated_th": "7 พ.ย. 2569 เวลา 22:01 น.",
+    "updated_iso": "2026-11-08T14:12:05.586265+07:00",
+    "updated_date": "2026-11-08",
+    "updated_th": "8 พ.ย. 2569 เวลา 14:12 น.",
     "gta_round": "",
-    "gta_time_th": "07/11/2569 เวลา 09:01 น. (ครั้งที่ 1)",
+    "gta_time_th": "08/11/2569 เวลา 09:00 น. (ครั้งที่ 1)",
     "source_thai": "chnwt-api",
     "source_spot": "gold-api.com",
     "notes": "14 Jul (Tue): GTA classic posted fresh round-4 price at 09:59 Bangkok (63,700/63,500), first live update since Saturday 11/07 -- ends the multi-day stale streak. Bar sell down THB1,300 (-2.0%) vs the carried-over Saturday price. Spot XAU/USD (gold-api.com) at $4,059.90 (-1.3% vs prior read) and USD/THB (er-api.com) roughly flat at 33.34.",
@@ -15,14 +15,14 @@
     "bar_buy": 64600.0,
     "jewelry_sell": 65600.0,
     "jewelry_buy": 63308.16,
-    "bar_sell_prev": 64650.0,
-    "bar_buy_prev": 64450.0
+    "bar_sell_prev": 64800.0,
+    "bar_buy_prev": 64600.0
   },
   "spot": {
     "xau_usd": 4072.1,
-    "xau_usd_prev": 4064.7,
-    "usd_thb": 33.5521,
-    "usd_thb_prev": 33.4416,
+    "xau_usd_prev": 4072.1,
+    "usd_thb": 33.5486,
+    "usd_thb_prev": 33.5521,
     "london_am": 4070.95,
     "london_pm": 4039.75,
     "newyork": 4016.44
@@ -61,12 +61,6 @@
     }
   ],
   "spot_history": [
-    {
-      "date": "2026-09-29",
-      "xau": 4170.3,
-      "thb": 33.5907,
-      "bar_sell": 66000.0
-    },
     {
       "date": "2026-09-30",
       "xau": 4163.8,
@@ -300,6 +294,12 @@
       "xau": 4072.1,
       "thb": 33.5521,
       "bar_sell": 64800.0
+    },
+    {
+      "date": "2026-11-08",
+      "xau": 4072.1,
+      "thb": 33.5486,
+      "bar_sell": 64800.0
     }
   ],
   "analysis": {
@@ -480,22 +480,14 @@
     ]
   },
   "odds": {
-    "up": 57,
-    "side": 22,
-    "down": 21,
-    "summary": "สัญญาณ 7 วันเอียงขึ้น — ปัจจัยหลักคือทิศทางค่าเงินบาทและโมเมนตัมทองโลก",
+    "up": 35,
+    "side": 29,
+    "down": 36,
+    "summary": "สัญญาณ 7 วันเอียงลง — แรงกดดันจากค่าเงินบาท/ทองโลกอ่อนตัว",
     "signals": [
       [
-        "บาทอ่อนค่า หนุนทองบาท",
-        "green"
-      ],
-      [
-        "ทองโลกขึ้นรายวัน",
-        "green"
-      ],
-      [
-        "ยืนเหนือค่าเฉลี่ย 5 วัน",
-        "green"
+        "หลุดค่าเฉลี่ย 5 วัน",
+        "red"
       ],
       [
         "โมเมนตัมรายสัปดาห์บวก",
