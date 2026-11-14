@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updated_iso": "2026-11-13T23:40:52.642072+07:00",
-    "updated_date": "2026-11-13",
-    "updated_th": "13 พ.ย. 2569 เวลา 23:40 น.",
-    "gta_round": "24",
+    "updated_iso": "2026-11-14T14:31:50.123585+07:00",
+    "updated_date": "2026-11-14",
+    "updated_th": "14 พ.ย. 2569 เวลา 14:31 น.",
+    "gta_round": "1",
     "gta_time_th": "09/11/2569 เวลา 17:02 น. (ครั้งที่ 23)",
     "source_thai": "goldtraders-classic",
     "source_spot": "gold-api.com",
@@ -11,18 +11,18 @@
     "analysis_updated_th": "17 ก.ค. 2569 เวลา 11:53 น."
   },
   "thai_gold": {
-    "bar_sell": 62650.0,
-    "bar_buy": 62450.0,
-    "jewelry_sell": 63450.0,
-    "jewelry_buy": 61200.92,
-    "bar_sell_prev": 63150.0,
-    "bar_buy_prev": 62950.0
+    "bar_sell": 62450.0,
+    "bar_buy": 62250.0,
+    "jewelry_sell": 63250.0,
+    "jewelry_buy": 61003.84,
+    "bar_sell_prev": 62650.0,
+    "bar_buy_prev": 62450.0
   },
   "spot": {
-    "xau_usd": 3886.95,
-    "xau_usd_prev": 3944.1,
-    "usd_thb": 33.8551,
-    "usd_thb_prev": 33.7226,
+    "xau_usd": 3887.6,
+    "xau_usd_prev": 3886.95,
+    "usd_thb": 33.8828,
+    "usd_thb_prev": 33.8551,
     "london_am": 4070.95,
     "london_pm": 4039.75,
     "newyork": 4016.44
@@ -56,17 +56,11 @@
     {
       "label": "พ.ย.",
       "year": 2569,
-      "price": 62650.0,
+      "price": 62450.0,
       "current": true
     }
   ],
   "spot_history": [
-    {
-      "date": "2026-10-05",
-      "xau": 4168.5,
-      "thb": 33.5663,
-      "bar_sell": 66400.0
-    },
     {
       "date": "2026-10-06",
       "xau": 4163.8,
@@ -300,6 +294,12 @@
       "xau": 3886.95,
       "thb": 33.8551,
       "bar_sell": 62650.0
+    },
+    {
+      "date": "2026-11-14",
+      "xau": 3887.6,
+      "thb": 33.8828,
+      "bar_sell": 62450.0
     }
   ],
   "analysis": {
@@ -480,18 +480,14 @@
     ]
   },
   "odds": {
-    "up": 33,
-    "side": 22,
-    "down": 45,
+    "up": 34,
+    "side": 26,
+    "down": 40,
     "summary": "สัญญาณ 7 วันเอียงลง — แรงกดดันจากค่าเงินบาท/ทองโลกอ่อนตัว",
     "signals": [
       [
-        "บาทอ่อนค่า หนุนทองบาท",
+        "ทองโลกขึ้นรายวัน",
         "green"
-      ],
-      [
-        "ทองโลกลงรายวัน",
-        "red"
       ],
       [
         "หลุดค่าเฉลี่ย 5 วัน",
@@ -505,9 +501,9 @@
   },
   "tech": {
     "r2": 4250,
-    "r1": 3900,
-    "s1": 3850,
-    "s2": 3825,
+    "r1": 3925,
+    "s1": 3875,
+    "s2": 3850,
     "range_lo": 3876,
     "range_hi": 4195
   }
