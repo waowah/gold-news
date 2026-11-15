@@ -1,8 +1,8 @@
 {
   "meta": {
-    "updated_iso": "2026-11-14T22:16:56.124453+07:00",
-    "updated_date": "2026-11-14",
-    "updated_th": "14 พ.ย. 2569 เวลา 22:16 น.",
+    "updated_iso": "2026-11-15T14:46:29.667019+07:00",
+    "updated_date": "2026-11-15",
+    "updated_th": "15 พ.ย. 2569 เวลา 14:46 น.",
     "gta_round": "1",
     "gta_time_th": "09/11/2569 เวลา 17:02 น. (ครั้งที่ 23)",
     "source_thai": "goldtraders-classic",
@@ -15,14 +15,14 @@
     "bar_buy": 62250.0,
     "jewelry_sell": 63250.0,
     "jewelry_buy": 61003.84,
-    "bar_sell_prev": 62650.0,
-    "bar_buy_prev": 62450.0
+    "bar_sell_prev": 62450.0,
+    "bar_buy_prev": 62250.0
   },
   "spot": {
     "xau_usd": 3887.6,
-    "xau_usd_prev": 3886.95,
-    "usd_thb": 33.8828,
-    "usd_thb_prev": 33.8551,
+    "xau_usd_prev": 3887.6,
+    "usd_thb": 33.8813,
+    "usd_thb_prev": 33.8828,
     "london_am": 4070.95,
     "london_pm": 4039.75,
     "newyork": 4016.44
@@ -61,12 +61,6 @@
     }
   ],
   "spot_history": [
-    {
-      "date": "2026-10-06",
-      "xau": 4163.8,
-      "thb": 33.6914,
-      "bar_sell": 66100.0
-    },
     {
       "date": "2026-10-07",
       "xau": 4109.6,
@@ -300,6 +294,12 @@
       "xau": 3887.6,
       "thb": 33.8828,
       "bar_sell": 62450.0
+    },
+    {
+      "date": "2026-11-15",
+      "xau": 3887.6,
+      "thb": 33.8813,
+      "bar_sell": 62450.0
     }
   ],
   "analysis": {
@@ -480,15 +480,11 @@
     ]
   },
   "odds": {
-    "up": 34,
-    "side": 26,
-    "down": 40,
+    "up": 28,
+    "side": 29,
+    "down": 43,
     "summary": "สัญญาณ 7 วันเอียงลง — แรงกดดันจากค่าเงินบาท/ทองโลกอ่อนตัว",
     "signals": [
-      [
-        "ทองโลกขึ้นรายวัน",
-        "green"
-      ],
       [
         "หลุดค่าเฉลี่ย 5 วัน",
         "red"
