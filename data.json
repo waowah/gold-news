@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updated_iso": "2026-11-16T16:51:23.564589+07:00",
-    "updated_date": "2026-11-16",
-    "updated_th": "16 พ.ย. 2569 เวลา 16:51 น.",
-    "gta_round": "35",
+    "updated_iso": "2026-11-17T01:49:01.333877+07:00",
+    "updated_date": "2026-11-17",
+    "updated_th": "17 พ.ย. 2569 เวลา 01:49 น.",
+    "gta_round": "37",
     "gta_time_th": "09/11/2569 เวลา 17:02 น. (ครั้งที่ 23)",
     "source_thai": "goldtraders-classic",
     "source_spot": "gold-api.com",
@@ -15,14 +15,14 @@
     "bar_buy": 61850.0,
     "jewelry_sell": 62850.0,
     "jewelry_buy": 60609.68,
-    "bar_sell_prev": 62450.0,
-    "bar_buy_prev": 62250.0
+    "bar_sell_prev": 62050.0,
+    "bar_buy_prev": 61850.0
   },
   "spot": {
-    "xau_usd": 3857.5,
-    "xau_usd_prev": 3887.6,
+    "xau_usd": 3849.67,
+    "xau_usd_prev": 3857.5,
     "usd_thb": 33.8959,
-    "usd_thb_prev": 33.8813,
+    "usd_thb_prev": 33.8959,
     "london_am": 4070.95,
     "london_pm": 4039.75,
     "newyork": 4016.44
@@ -61,12 +61,6 @@
     }
   ],
   "spot_history": [
-    {
-      "date": "2026-10-08",
-      "xau": 4117.1,
-      "thb": 33.6593,
-      "bar_sell": 65750.0
-    },
     {
       "date": "2026-10-09",
       "xau": 4190.3,
@@ -300,6 +294,12 @@
       "xau": 3857.5,
       "thb": 33.8959,
       "bar_sell": 62050.0
+    },
+    {
+      "date": "2026-11-17",
+      "xau": 3849.67,
+      "thb": 33.8959,
+      "bar_sell": 62050.0
     }
   ],
   "analysis": {
@@ -504,7 +504,7 @@
     "r1": 3875,
     "s1": 3825,
     "s2": 3800,
-    "range_lo": 3857,
+    "range_lo": 3849,
     "range_hi": 4195
   }
 }
