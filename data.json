@@ -1,9 +1,9 @@
 {
   "meta": {
-    "updated_iso": "2026-11-18T17:17:00.326336+07:00",
-    "updated_date": "2026-11-18",
-    "updated_th": "18 พ.ย. 2569 เวลา 17:17 น.",
-    "gta_round": "23",
+    "updated_iso": "2026-11-19T00:28:31.544810+07:00",
+    "updated_date": "2026-11-19",
+    "updated_th": "19 พ.ย. 2569 เวลา 00:28 น.",
+    "gta_round": "24",
     "gta_time_th": "09/11/2569 เวลา 17:02 น. (ครั้งที่ 23)",
     "source_thai": "goldtraders-classic",
     "source_spot": "gold-api.com",
@@ -11,18 +11,18 @@
     "analysis_updated_th": "17 ก.ค. 2569 เวลา 11:53 น."
   },
   "thai_gold": {
-    "bar_sell": 60800.0,
-    "bar_buy": 60600.0,
-    "jewelry_sell": 61600.0,
-    "jewelry_buy": 59381.72,
-    "bar_sell_prev": 61850.0,
-    "bar_buy_prev": 61650.0
+    "bar_sell": 60750.0,
+    "bar_buy": 60550.0,
+    "jewelry_sell": 61550.0,
+    "jewelry_buy": 59336.24,
+    "bar_sell_prev": 60800.0,
+    "bar_buy_prev": 60600.0
   },
   "spot": {
-    "xau_usd": 3773.6,
-    "xau_usd_prev": 3872.32,
+    "xau_usd": 3746.95,
+    "xau_usd_prev": 3773.6,
     "usd_thb": 33.8235,
-    "usd_thb_prev": 33.8868,
+    "usd_thb_prev": 33.8235,
     "london_am": 4070.95,
     "london_pm": 4039.75,
     "newyork": 4016.44
@@ -56,17 +56,11 @@
     {
       "label": "พ.ย.",
       "year": 2569,
-      "price": 60800.0,
+      "price": 60750.0,
       "current": true
     }
   ],
   "spot_history": [
-    {
-      "date": "2026-10-10",
-      "xau": 4195.6,
-      "thb": 33.5679,
-      "bar_sell": 66550.0
-    },
     {
       "date": "2026-10-11",
       "xau": 4195.6,
@@ -300,6 +294,12 @@
       "xau": 3773.6,
       "thb": 33.8235,
       "bar_sell": 60800.0
+    },
+    {
+      "date": "2026-11-19",
+      "xau": 3746.95,
+      "thb": 33.8235,
+      "bar_sell": 60750.0
     }
   ],
   "analysis": {
@@ -480,15 +480,11 @@
     ]
   },
   "odds": {
-    "up": 21,
-    "side": 22,
-    "down": 57,
+    "up": 25,
+    "side": 26,
+    "down": 49,
     "summary": "สัญญาณ 7 วันเอียงลง — แรงกดดันจากค่าเงินบาท/ทองโลกอ่อนตัว",
     "signals": [
-      [
-        "บาทแข็งค่า กดทองบาท",
-        "red"
-      ],
       [
         "ทองโลกลงรายวัน",
         "red"
@@ -505,10 +501,10 @@
   },
   "tech": {
     "r2": 4250,
-    "r1": 3800,
-    "s1": 3750,
-    "s2": 3725,
-    "range_lo": 3773,
+    "r1": 3775,
+    "s1": 3725,
+    "s2": 3700,
+    "range_lo": 3746,
     "range_hi": 4195
   }
 }
