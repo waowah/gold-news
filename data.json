@@ -1,27 +1,27 @@
 {
   "meta": {
-    "updated_iso": "2026-11-24T03:28:28.602021+07:00",
+    "updated_iso": "2026-11-24T17:49:42.785157+07:00",
     "updated_date": "2026-11-24",
-    "updated_th": "24 พ.ย. 2569 เวลา 03:28 น.",
+    "updated_th": "24 พ.ย. 2569 เวลา 17:49 น.",
     "gta_round": "",
-    "gta_time_th": "23/11/2569 เวลา 17:10 น. (ครั้งที่ 31)",
+    "gta_time_th": "24/11/2569 เวลา 16:35 น. (ครั้งที่ 45)",
     "source_thai": "chnwt-api",
     "source_spot": "gold-api.com",
     "notes": "14 Jul (Tue): GTA classic posted fresh round-4 price at 09:59 Bangkok (63,700/63,500), first live update since Saturday 11/07 -- ends the multi-day stale streak. Bar sell down THB1,300 (-2.0%) vs the carried-over Saturday price. Spot XAU/USD (gold-api.com) at $4,059.90 (-1.3% vs prior read) and USD/THB (er-api.com) roughly flat at 33.34.",
     "analysis_updated_th": "17 ก.ค. 2569 เวลา 11:53 น."
   },
   "thai_gold": {
-    "bar_sell": 58350.0,
-    "bar_buy": 58150.0,
-    "jewelry_sell": 59150.0,
-    "jewelry_buy": 56986.44,
+    "bar_sell": 58200.0,
+    "bar_buy": 58000.0,
+    "jewelry_sell": 59000.0,
+    "jewelry_buy": 56834.84,
     "bar_sell_prev": 58350.0,
     "bar_buy_prev": 58150.0
   },
   "spot": {
-    "xau_usd": 3640.5,
+    "xau_usd": 3624.0,
     "xau_usd_prev": 3622.0,
-    "usd_thb": 33.9434,
+    "usd_thb": 33.998,
     "usd_thb_prev": 33.9434,
     "london_am": 4070.95,
     "london_pm": 4039.75,
@@ -56,7 +56,7 @@
     {
       "label": "พ.ย.",
       "year": 2569,
-      "price": 58350.0,
+      "price": 58200.0,
       "current": true
     }
   ],
@@ -297,9 +297,9 @@
     },
     {
       "date": "2026-11-24",
-      "xau": 3640.5,
-      "thb": 33.9434,
-      "bar_sell": 58350.0
+      "xau": 3624.0,
+      "thb": 33.998,
+      "bar_sell": 58200.0
     }
   ],
   "analysis": {
@@ -480,11 +480,15 @@
     ]
   },
   "odds": {
-    "up": 49,
-    "side": 26,
-    "down": 25,
+    "up": 57,
+    "side": 22,
+    "down": 21,
     "summary": "สัญญาณ 7 วันเอียงขึ้น — ปัจจัยหลักคือทิศทางค่าเงินบาทและโมเมนตัมทองโลก",
     "signals": [
+      [
+        "บาทอ่อนค่า หนุนทองบาท",
+        "green"
+      ],
       [
         "ทองโลกขึ้นรายวัน",
         "green"
@@ -501,8 +505,8 @@
   },
   "tech": {
     "r2": 4225,
-    "r1": 3675,
-    "s1": 3625,
+    "r1": 3650,
+    "s1": 3600,
     "s2": 3525,
     "range_lo": 3539,
     "range_hi": 4166
